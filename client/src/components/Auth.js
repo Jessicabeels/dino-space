@@ -45,7 +45,7 @@ class Auth extends Component {
         //call a signup function
         const credentials = {
             username: this.state.username,
-            password: this.state.password
+            password: this.state.password 
         }
 
         this.props.signup(credentials)
