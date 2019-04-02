@@ -10,6 +10,7 @@ import Intro from './components/Intro.js'
 import Prepare from './components/Prepare'
 import Game from './components/Game.js'
 import GameOver from './components/GameOver'
+import './style.css'
 
 class App extends Component {
     render(){

@@ -4,7 +4,7 @@ import Intro from './Intro'
 
 const Home = (props) => {
     return (
-        <div>
+        <div className="home-container">
             HOME HOME HOME HOME
 
 

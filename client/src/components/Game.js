@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 
 const Game = () => {
     return (
-        <div>
+        <div className="game-container">
             GAME GAME GAME GAME GAME
             <button>
-                
+
                 <Link to="/gameover" className="gameover-next">NEXT</Link>
             </button>
         </div>

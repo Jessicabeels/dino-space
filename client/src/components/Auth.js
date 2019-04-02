@@ -61,7 +61,7 @@ class Auth extends Component {
     render(){
         // console.log(this.props)
         return (
-            <div>
+            <div className="auth-container">
                 {this.state.formToggle ?
                 <>
                     <h1>Sign Up</h1>

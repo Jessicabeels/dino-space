@@ -1,0 +1,23 @@
+.intro-container {
+    background-color: lightgreen;
+}
+
+.prepare-container {
+    background-color: lightsalmon;
+}
+
+.game-container {
+    background-color: lightseagreen;
+}
+
+.gameover-container {
+    background-color: lightskyblue;
+}
+
+.auth-container {
+    background-color: lightyellow;
+}
+
+.home-container {
+    background-color: lightcoral;
+}

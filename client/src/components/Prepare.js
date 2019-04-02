@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Prepare = () => {
     return (
-        <div>
+        <div className="prepare-container">
                 PREPARE PREPARE PREPARE
                 <button>
                     <Link className="game-next" to='/Game'>NEXT</Link>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Intro = () => {
     return (
-        <div>
+        <div className="intro-container">
 
         INTRO INTRO INTRO
             <button className="prepare-next">
