@@ -44,3 +44,4 @@ userSchema.methods.withoutPassword = function() {
 }
 
 module.exports = mongoose.model("User", userSchema)
+
