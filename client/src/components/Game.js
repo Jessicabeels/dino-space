@@ -10,6 +10,7 @@ const Game = () => {
 
                 <Link to="/gameover" className="gameover-next">NEXT</Link>
             </button>
+            <div className="game-board"></div>
         </div>
     )
 }

@@ -1,18 +1,8 @@
-.intro-container {
-    background-color: lightgreen;
+* {
+    box-sizing: border-box;
 }
 
-.prepare-container {
-    background-color: lightsalmon;
-}
 
-.game-container {
-    background-color: lightseagreen;
-}
-
-.gameover-container {
-    background-color: lightskyblue;
-}
 
 .auth-container {
     background-color: lightyellow;
@@ -21,3 +11,33 @@
 .home-container {
     background-color: lightcoral;
 }
+
+.intro-container {
+    background-color: lightgreen;
+}
+
+.prepare-container {
+    background-color: lightsalmon;
+}
+
+/* ///////////GAME //////////////////////////////////////////////// */
+.game-container {
+    background-color: lightseagreen;
+}
+
+.game-board {
+    width: 600px;
+    height: 600px;
+    background-color: cornflowerblue;
+    position: relative;
+    border: 1px black solid;
+}
+
+.player {
+    position: absolute;
+}
+
+.gameover-container {
+    background-color: lightskyblue;
+}
+
