@@ -62,9 +62,10 @@ class Auth extends Component {
         // console.log(this.props)
         return (
             <div className="auth-container">
+                <div className="login-signup">
                 {this.state.formToggle ?
                 <>
-                    <h1>Sign Up</h1>
+                    <h1 className="welcome-text">Come Play!</h1>
                     <AuthForm
                         username={this.state.username}
                         password={this.state.password}
@@ -73,11 +74,11 @@ class Auth extends Component {
                         btnText="Sign Up"
                     />
                     <p>{this.props.errMsg}</p>
-                    <button onClick={this.toggleForm}> Already a User? </button>
+                    <button onClick={this.toggleForm} className="toggle-button"> Already a User? </button>
                 </>
                 :
                 <>
-                    <h1>Login</h1>
+                    <h1 className="welcome-text">Welcome Back</h1>
                     <AuthForm
                         username={this.state.username}
                         password={this.state.password}
@@ -86,9 +87,10 @@ class Auth extends Component {
                         btnText="Login"
                     />
                     <p>{this.props.errMsg}</p>
-                    <button onClick={this.toggleForm}> Not a user yet?</button>
+                    <button onClick={this.toggleForm} className="toggle-button"> Not a user yet?</button>
                 </>
                 }
+                </div>
             </div>
         )
     }

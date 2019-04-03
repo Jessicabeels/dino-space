@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Square from './Square'
 
 
 const Game = () => {
@@ -10,7 +11,10 @@ const Game = () => {
 
                 <Link to="/gameover" className="gameover-next">NEXT</Link>
             </button>
-            <div className="game-board"></div>
+            {/* <div className="game-board">
+                <div className="player"></div>
+            </div> */}
+            <Square />
         </div>
     )
 }

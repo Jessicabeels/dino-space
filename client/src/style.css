@@ -1,12 +1,80 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    
 }
 
+/* Font-Family: 'Arvo', Serif;
+Font-Size: 44px;
+Font-Family: 'Lato', Sans-Serif;
+Font-Size: 16px; */
 
+
+/* ////////////////AUTH//////////////////////// */
 
 .auth-container {
-    background-color: lightyellow;
+    /* background-color: lightyellow; */
+    background-image: url('./assets/space-background.png');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
 }
+
+.login-signup {
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    align-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-left: 36%;
+    margin-top: 10%;
+    border-radius: 20px;
+}
+
+.auth-form {
+    padding: 50px;
+    Font-Family: 'Arvo', Serif;
+    Font-Size: 44px;
+    
+}
+
+.welcome-text {
+    font-size: 40px;
+    Font-Family: 'Arvo', Serif;
+}
+
+.auth-input {
+    padding: 8px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    align-content: center;
+}
+
+.login-button{
+    padding: 10px;
+    border-radius: 30px;
+    width: 150px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+
+}
+
+.toggle-button {
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+
+
+/* ///////////////////////////AUTH ////////////////////////////// */
 
 .home-container {
     background-color: lightcoral;
@@ -28,13 +96,25 @@
 .game-board {
     width: 600px;
     height: 600px;
-    background-color: cornflowerblue;
+    margin-left: 20%;
+    background-position: center;
+    background-size: cover;
+    background-image: url('https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
     position: relative;
-    border: 1px black solid;
+    border: 3px whitesmoke solid;
+    z-index: 1;
 }
 
 .player {
     position: absolute;
+    background-image: url('./assets/DonnyDino.png');
+    background-position: center;
+    background-size: cover;
+    /* background-color: red; */
+    width: 120px;
+    height: 90px;
+    z-index: 10;
+
 }
 
 .gameover-container {
