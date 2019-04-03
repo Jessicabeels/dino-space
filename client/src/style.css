@@ -13,7 +13,6 @@ Font-Size: 16px; */
 /* ////////////////AUTH//////////////////////// */
 
 .auth-container {
-    /* background-color: lightyellow; */
     background-image: url('./assets/space-background.png');
     height: 100vh;
     background-position: center;
@@ -91,12 +90,13 @@ Font-Size: 16px; */
 /* ///////////GAME //////////////////////////////////////////////// */
 .game-container {
     background-color: lightseagreen;
+    position: fixed;
+    
 }
 
 .game-board {
     width: 600px;
     height: 600px;
-    margin-left: 20%;
     background-position: center;
     background-size: cover;
     background-image: url('https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
@@ -110,14 +110,43 @@ Font-Size: 16px; */
     background-image: url('./assets/DonnyDino.png');
     background-position: center;
     background-size: cover;
-    /* background-color: red; */
-    width: 120px;
+    width: 150px;
     height: 90px;
     z-index: 10;
 
 }
 
+.astroid {
+    position: absolute;
+    background-image: url('./assets/astroid.png');
+    /* background-color: red; */
+    background-position: center;
+    background-size: cover;
+    width: 70px;
+    height: 50px;
+    z-index: 9;
+}
+
+
+.stay-game {
+    position: fixed;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 20%;
+}
+
+
+
+
+
+
+
+
+
+/* /////////GAME//////////////////////////// */
+
 .gameover-container {
     background-color: lightskyblue;
+   
 }
 

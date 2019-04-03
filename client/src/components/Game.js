@@ -11,10 +11,11 @@ const Game = () => {
 
                 <Link to="/gameover" className="gameover-next">NEXT</Link>
             </button>
-            {/* <div className="game-board">
-                <div className="player"></div>
-            </div> */}
-            <Square />
+        
+            <div className="stay-game">
+                <Square />
+            </div>
+            
         </div>
     )
 }

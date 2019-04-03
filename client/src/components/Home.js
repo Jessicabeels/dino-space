@@ -8,7 +8,7 @@ const Home = (props) => {
             HOME HOME HOME HOME
 
 
-
+            <div className="astroid"></div>
             <button className="next-intro">
                 <Link to="/intro" component={Intro}>NEXT</Link>
             </button>
