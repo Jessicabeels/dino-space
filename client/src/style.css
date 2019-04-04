@@ -16,7 +16,7 @@ Font-Size: 16px; */
     float:right;
     width: 200px;
     z-index: 2;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -38,6 +38,21 @@ Font-Size: 16px; */
     
 }
 
+.title {
+    background-image: url('./assets/Title.png');
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    width: 700px;
+    /* background-color: white; */
+    align-content: center;
+    /* z-index: 2; */
+    margin-left: 200px;
+    padding: 10px;
+
+}
+
 .login-signup {
     background-color: white;
     width: 400px;
@@ -47,7 +62,7 @@ Font-Size: 16px; */
     text-align: center;
     padding: 20px;
     margin-left: 36%;
-    margin-top: 10%;
+    margin-top: 20%;
     border-radius: 20px;
 }
 
@@ -78,7 +93,7 @@ Font-Size: 16px; */
     background-color: black;
     color: white;
     font-size: 30px;
-
+    z-index: 10;
 }
 
 .toggle-button {
@@ -144,7 +159,7 @@ Font-Size: 16px; */
 
   }
 
-  .next-intro {
+  .next-intro{
       float:right;
       margin-top: 30%;
       margin-right: 5%;
@@ -182,25 +197,36 @@ Font-Size: 16px; */
 /* ///////////////////////////HOME//////////// */
 
 
-.intro-container {
-    background-color: lightgreen;
-}
-
+/* //////////////////////////////PREPARE //////////////////////////////*/
 .prepare-container {
-    background-color: lightsalmon;
+    background-image: url('https://i.imgur.com/hMo1bw7.png');
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
 }
 
 
-
+/* //////////////////////////////PREPARE ///////////////////////*/
 
 /* ///////////GAME //////////////////////////////////////////////// */
 .game-container {
     background-color: lightseagreen;
-    position: fixed;
+    height: 100vh;
+    background-image: url('./assets/game-background.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
     
 }
 
+
+
+
+
+
 .game-board {
+    margin-top: 180px;
     width: 600px;
     height: 600px;
     background-position: center;
@@ -242,7 +268,22 @@ Font-Size: 16px; */
 }
 
 
-
+.gameover-next {
+    /* float:right; */
+    margin-top: 30%;
+    margin-right: 55%;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    font-size: 30px;
+    /* margin: 40px; */
+    text-decoration: none;
+    background-color: white;
+    animation-name: button-animation;
+    animation-delay: 1s;
+}
 
 
 
@@ -251,8 +292,88 @@ Font-Size: 16px; */
 
 /* /////////GAME//////////////////////////// */
 
+
+
+
+
+/* ////GAME-OVER////////////////////////// */
 .gameover-container {
-    background-color: lightskyblue;
+    
+    background-image: url('https://i.imgur.com/hMo1bw7.png');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
    
 }
 
+
+.play-again{
+    z-index: 10;
+    position: absolute;
+    width: 200px;
+    margin-top: 100px;
+    height: 50px;
+    background-color: white;
+}
+
+
+.gameOver-title {
+    position: absolute;
+    background-image: url('./assets/game-over.png');
+    background-position: center;
+    background-size: cover;
+    align-content: center;
+    height: 120%;
+    width: 100%;
+    /* z-index: 3; */
+  
+   
+}
+
+
+
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  top: -25px;
+  /* background-image: linear-gradient(0deg, transparent, black 75%); */
+  /* z-index: 1; */
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.crawl {
+  position: relative;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+}
+
+
+@keyframes crawl {
+    0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+    100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}

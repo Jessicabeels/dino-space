@@ -8,7 +8,8 @@ class Astroid extends Component {
         this.state = {
             astroidX: props.astroidX,
             astroidY: props.astroidY,
-            isAstroidMoving: true
+            isAstroidMoving: true,
+            intervalID: ''
         }
     }
 
@@ -38,6 +39,8 @@ class Astroid extends Component {
             }
         }
     }
+
+    
 
 
 

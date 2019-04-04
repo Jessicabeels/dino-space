@@ -4,12 +4,12 @@ import { withUser } from './context/UserProvider.js'
 import Auth from './components/Auth.js'
 import ProtectedRoute from './shared/ProtectedRoute.js'
 
-import NotFound from './components/NotFound.js'
-import Home from './components/Home.js'
-import Intro from './components/Intro.js'
-import Prepare from './components/Prepare'
-import Game from './components/Game.js'
-import GameOver from './components/GameOver'
+import NotFound from './components/pages/NotFound.js'
+import Home from './components/pages/Home.js'
+
+import Prepare from './components/pages/Prepare'
+import Game from './components/pages/Game.js'
+import GameOver from './components/pages/GameOver'
 import './style.css'
 
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
                         exact path="/"
                         render={rProps => 
                             token 
-                                ? <Redirect to="/home"/>
+                                ? <Redirect to="/pages/home"/>
                                 : <Auth {...rProps}/>}/>
                     {/* addpage instead of posts
                      */}
@@ -40,22 +40,17 @@ class App extends Component {
                         component={NotFound}/> */}
                     <ProtectedRoute
                         token={token}
-                        path="/intro"
-                        redirectTo="/"
-                        component={Intro}/> 
-                    <ProtectedRoute
-                        token={token}
-                        path="/prepare"
+                        path="/pages/prepare"
                         redirectTo="/"
                         component={Prepare}/>
                     <ProtectedRoute
                         token={token}
-                        path="/game"
+                        path="/pages/game"
                         redirectTo="/"
                         component={Game}/>
                     <ProtectedRoute
                         token={token}
-                        path="/gameover" 
+                        path="/pages/gameover" 
                         redirectTo="/"
                         component={GameOver}/>  
                 </Switch>

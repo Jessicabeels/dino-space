@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Intro from './Intro'
+
+import Prepare from './Prepare';
 
 const Home = (props) => {
     return (
         <div className="home-container">
-            HOME HOME HOME HOME
+            <div className="title"></div>
 
 
             <div className="astroid-home"></div>
             <div className="home-text"></div>
             <button className="next-intro">
-                <Link to="/intro" component={Intro}>NEXT</Link>
+                <Link to="/pages/prepare" component={Prepare}>NEXT</Link>
             </button>
         </div>
     )
