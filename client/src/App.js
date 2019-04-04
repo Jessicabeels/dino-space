@@ -17,7 +17,7 @@ class App extends Component {
         const { token, logout, user } = this.props
         return (
             <div>
-                {token && <button onClick={logout}>Logout</button>}
+                {token && <button onClick={logout} className="logout-button">Logout</button>}
                 {token && user.isAdmin && <button>U</button>}
                 <Switch>
                     <Route 

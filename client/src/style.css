@@ -10,6 +10,23 @@ Font-Family: 'Lato', Sans-Serif;
 Font-Size: 16px; */
 
 
+
+.logout-button {
+    position: absolute;
+    float:right;
+    width: 200px;
+    z-index: 2;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: white;
+   
+}
+
 /* ////////////////AUTH//////////////////////// */
 
 .auth-container {
@@ -75,9 +92,95 @@ Font-Size: 16px; */
 
 /* ///////////////////////////AUTH ////////////////////////////// */
 
+
+
+
+
+/* /////////////////////HOME//////////// */
 .home-container {
     background-color: lightcoral;
+    background-image: url('https://i.imgur.com/hMo1bw7.png');
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    
 }
+
+
+
+
+.astroid-home {
+    position: absolute;
+    background-image: url('./assets/astroid.png');
+    /* background-color: red; */
+    background-position: center;
+    background-size: cover;
+    margin-top: 50px;
+    width: 150px;
+    height: 100px;
+    z-index: 9;
+    animation-name: astro-move;
+    animation-duration: 10s;
+    animation-direction: reverse;  
+    animation-iteration-count: 3;
+}
+
+@keyframes astro-move {
+    /* end */
+    0%   { left:0px; top:0px; }
+    /* leg 3 */
+    25%  { left:1450px; top:0px; }
+    /* leg 2 */
+    50%  { left:1000px; top:800px; }
+    /* leg 1 */
+    75%  { left:0px; top:600px; } 
+    /* start */
+    100% { left:0px; top:0px; }
+    
+  }
+
+  .home-text {
+
+  }
+
+  .next-intro {
+      float:right;
+      margin-top: 30%;
+      margin-right: 5%;
+      padding-left: 80px;
+      padding-right: 80px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 20px;
+      font-size: 30px;
+      /* margin: 40px; */
+      text-decoration: none;
+      background-color: white;
+      animation-name: button-animation;
+      animation-delay: 1s;
+  }
+
+  a:link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: red;
+   
+   
+}
+
+  @keyframes button-animation {
+    from {background-color: white}
+    to {background-color: dodgerblue}
+  }
+
+
+
+
+
+/* ///////////////////////////HOME//////////// */
+
 
 .intro-container {
     background-color: lightgreen;
@@ -86,6 +189,9 @@ Font-Size: 16px; */
 .prepare-container {
     background-color: lightsalmon;
 }
+
+
+
 
 /* ///////////GAME //////////////////////////////////////////////// */
 .game-container {

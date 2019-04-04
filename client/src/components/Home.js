@@ -8,7 +8,8 @@ const Home = (props) => {
             HOME HOME HOME HOME
 
 
-            <div className="astroid"></div>
+            <div className="astroid-home"></div>
+            <div className="home-text"></div>
             <button className="next-intro">
                 <Link to="/intro" component={Intro}>NEXT</Link>
             </button>
