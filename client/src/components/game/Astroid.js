@@ -6,16 +6,19 @@ class Astroid extends Component {
     constructor(props){
         super(props)
         this.state = {
-            astroidX: props.astroidX,
-            astroidY: props.astroidY,
+            astroidX: this.props.astroidX,
+            astroidY: this.props.astroidY,
             isAstroidMoving: true,
             intervalID: ''
         }
+        this.level1 = null
     }
 
     moveAstroid = e => {
         if (this.state.astroidY < 550){
-            setTimeout(() => {this.setState(prevState => ({ astroidY: prevState.astroidY + 1 }))}, 100)
+            if(!this.level1){
+                this.level1 = setInterval(() => {this.setState(prevState => ({ astroidY: prevState.astroidY + 1 }))}, 100)
+            }
         } else {
             this.setState({astroidY: 100})
         }
@@ -39,14 +42,26 @@ class Astroid extends Component {
             }
         }
     }
+    //points counter in check collusion
 
-    
+    componentDidMount(){
+        if(this.state.isAstroidMoving){
+            this.moveAstroid()
+        }
+        
+    }
+
+    componentDidUpdate(prevProps, prevState){
+        if(this.state.isAstroidMoving){
+  
+            this.moveAstroid()
+        }
+    }
 
 
 
 
     render(){
-        this.state.isAstroidMoving ?  this.moveAstroid(): console.log(this.state.isAstroidMoving)
         return (
             <div className="astroid" style={{ top: this.state.astroidY + "px", left: this.state.astroidX + "px"}}></div>
         )

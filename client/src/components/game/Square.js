@@ -8,9 +8,11 @@ class Square extends Component {
             playerX: 300,
             playerY: 500,
             playerA: 100,
-            playerB: 250
+            playerB: 250,
+            astroids: [1,2,3,4]
             // isAstroidMoving: true
         }
+
     }
 
     componentDidMount(){
@@ -38,18 +40,20 @@ class Square extends Component {
         }
     }
 
-    moveAstroid = e => {
-        if (this.state.astroidY < 550){
-            setTimeout(() => {this.setState(prevState => ({ astroidY: prevState.astroidY + 1 }))}, 100)
-        } else {
-            this.setState({astroidY: 100})
-        }
-        this.checkCollision()
+    // moveAstroid = e => {
+    //     if (this.state.astroidY < 550){
+    //         setTimeout(() => {this.setState(prevState => ({ astroidY: prevState.astroidY + 1 }))}, 100)
+    //     } else {
+    //         this.setState({astroidY: 100})
+    //     }
+    //     this.checkCollision()
+        
+    // }
+
+
+    levelUp = ()=> {
         
     }
-
-
-
 
 
 
@@ -58,11 +62,11 @@ class Square extends Component {
            
            <div className="game-board">
                 <div className="player" style={{ top: this.state.playerY + "px", left: this.state.playerX + "px" }}></div>
-                <Astroid astroidX={100} astroidY={150} {...this.state}/>
+                {/* <Astroid astroidX={100} astroidY={150} {...this.state}/>
                 <Astroid astroidX={250} astroidY={100} {...this.state}/>
-                <Astroid astroidX={400} astroidY={150} {...this.state}/>
+                <Astroid astroidX={400} astroidY={150} {...this.state}/> */}
             
-        
+                {this.state.astroids.map(a => <Astroid key={a} astroidX={Math.floor(Math.random() * 400)} astroidY={100}/>)}
            </div>
        )
    }
