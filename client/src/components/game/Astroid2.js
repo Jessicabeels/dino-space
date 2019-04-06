@@ -17,8 +17,7 @@ class Astroid extends Component {
     moveAstroid = e => {
         if (this.state.astroidY < 550){
             if(!this.level1){
-                console.log("vl 1 strt")
-                this.level1 = setInterval(() => {this.setState(prevState => ({ astroidY: prevState.astroidY + this.props.speed }))}, 60)
+                this.level1 = setInterval(() => {this.setState(prevState => ({ astroidY: prevState.astroidY + 1 }))}, 100)
             }
         } else {
             this.setState({astroidY: 100})
@@ -28,9 +27,9 @@ class Astroid extends Component {
     }
 
     checkCollision = () => {
-        // console.log(' A x is : ' + this.state.astroidX)
+        console.log(' A x is : ' + this.state.astroidX)
         // console.log(' A y is : ' + this.state.astroidY)
-        // console.log(' P x is : ' + this.props.playerX)
+        console.log(' P x is : ' + this.props.playerX)
         // console.log(' P y is : ' + this.state.playerY)
         if (this.state.astroidY < this.props.playerY +15 && this.state.astroidY > this.props.playerY -15) { 
             if(this.state.astroidX < this.props.playerX +75 && this.state.astroidX > this.props.playerX -75){
@@ -39,9 +38,8 @@ class Astroid extends Component {
                     isAstroidMoving: false
                     
                 })
-                this.props.collisionOccured(this.props.astroidNumber)
-                // alert('Game over')
-            } 
+                alert('Game over')
+            }
         }
     }
     //points counter in check collusion

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Square from '../game/Square'
+// import GameInfo from '../game/GameInfo.js'
 
 
 const Game = () => {
@@ -17,6 +18,8 @@ const Game = () => {
             <button>
                 <Link to="/pages/gameover" className="gameover-next">NEXT</Link>
             </button>
+
+            {/* <GameInfo/> */}
             
         </div>
     )

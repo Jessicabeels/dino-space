@@ -134,7 +134,7 @@ Font-Size: 16px; */
     margin-top: 50px;
     width: 150px;
     height: 100px;
-    z-index: 9;
+    /* z-index: 9; */
     animation-name: astro-move;
     animation-duration: 10s;
     animation-direction: reverse;  
