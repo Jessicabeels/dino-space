@@ -48,11 +48,11 @@ class App extends Component {
                         path="/pages/gameover" 
                         redirectTo="/"
                         component={GameOver}/>
-                    <ProtectedRoute
+                    {/* <ProtectedRoute
                         token={token}
                         path="*"
                         redirectTo="/"
-                        component={NotFound}/>  
+                        component={NotFound}/>   */}
                 </Switch>
             </div>
         )
