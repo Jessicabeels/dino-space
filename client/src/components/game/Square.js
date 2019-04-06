@@ -44,41 +44,50 @@ class Square extends Component {
         }
     }
 
+    //how many astroidNums are there? if collision occurred then increcemnt 
+
     collisionOccured = (astroidNum) => {
         console.log(astroidNum)
         this.setState(prevState => ({ 
             astroids: prevState.astroids.filter(a => a !== astroidNum), 
             destroyedAstros: [...prevState.destroyedAstros, astroidNum]
+            
         }), () => {
             if(!this.state.astroids.length){
                 this.levelUp()
             }
         })
+        
         // REceive which astroid had the collison
         // Remove number representing astroid from arr in state
     }
 
-    // moveAstroid = e => {
-    //     if (this.state.astroidY < 550){
-    //         setTimeout(() => {this.setState(prevState => ({ astroidY: prevState.astroidY + 1 }))}, 100)
-    //     } else {
-    //         this.setState({astroidY: 100})
-    //     }
-    //     this.checkCollision()
-        
-    // }
+   astroCount = () => {
+       let astrosCounted = 0
+       if(this.destroyedAstros){
+            astrosCounted ++
+       }
+   }
 
 
     levelUp = ()=> {
-        this.setState(p => ({astroids: p.destroyedAstros.map(a => a + 5), destroyedAstros: [], speed: p.speed + 10}))
+        this.setState(p => ({astroids: p.destroyedAstros.map(a => a + 5), destroyedAstros: [], speed: p.speed + 1}))
+        
     }
 
 
 
+ 
+
+
    render(){
+       
+    // console.log("the destroyed ASTROS" + this.destroyedAstros)
+    
        return (
         <div className="game-page"> 
             <GameInfo />
+           
            <div className="game-board">
                 <div className="player" style={{ top: this.state.playerY + "px", left: this.state.playerX + "px" }}></div>
                 {/* <Astroid astroidX={100} astroidY={150} {...this.state}/>
