@@ -66,7 +66,8 @@ class Square extends Component {
     }
 
    astroCount = () => {
-    if(1 === 1){
+    console.log(this.destroyedAstros)
+    if(this.destroyedAstros > 0){
         this.setState(p => ({
              astrosCounted: p.astroCount ++
         }))        
@@ -94,7 +95,7 @@ class Square extends Component {
        return (
         <div className="game-page"> 
             <GameInfo />
-            Astroids Destroyed: {this.state.astrosCounted}
+            Astroids Destroyed: {this.state.astrosCounted} {this.state.destroyedAstros}
            
            <div className="game-board">
                 <div className="player" style={{ top: this.state.playerY + "px", left: this.state.playerX + "px" }}></div>

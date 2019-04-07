@@ -41,6 +41,7 @@ class Astroid extends Component {
             }
         }
         this.checkImpactEarth()
+        
     }
 
 

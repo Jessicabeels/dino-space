@@ -47,15 +47,15 @@ Font-Size: 16px; */
 .title {
     background-image: url('./assets/Title.png');
     position: absolute;
-   
+    margin-top: 100px;
     background-position: center;
     background-size: cover;
     height: 100%;
-    width: 100vw;
+    width: 1400px;
     /* background-color: white; */
     align-content: center;
     /* z-index: 2; */
-    margin-left: 9%;
+    /* margin-left: 9%; */
     padding-bottom: 10px;
 
 }
@@ -137,7 +137,7 @@ Font-Size: 16px; */
     background-position: center;
     background-size: cover;
     height: 40%;
-    width: 700px;
+    width: 800px;
     /* background-color: white; */
     align-content: center;
     /* z-index: 2; */
@@ -254,8 +254,15 @@ Font-Size: 16px; */
 
 }
 
-.instructions-img {
+.instructions {
     position: absolute;
+    width: 500px;
+    height: 500px;
+    margin: 10%;
+}
+
+.instructions-img {
+    
     background-image: url('./assets/arrow-keys.png');
     background-color: #adccf8;
     width: 200px;
@@ -263,13 +270,17 @@ Font-Size: 16px; */
     background-position: center;
     background-size: cover;
     border-radius: 20px;
-    margin: 20%;
+    
 }
 
 .instructions-text {
     color: white;
-    width: 200px;
+    width: 250px;
     height: 200px;
+    Font-Family: 'Lato', Sans-Serif;
+    Font-Size: 23px;
+    padding: 20px;
+    line-height: 30px;
     
     
 }
@@ -299,7 +310,7 @@ Font-Size: 16px; */
     height: 600px;
     background-position: center;
     background-size: cover;
-    background-image: url('https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-image: url('./assets/earth-gameboard.png');
     position: relative;
     border: 3px whitesmoke solid;
     z-index: 1;
@@ -338,21 +349,34 @@ Font-Size: 16px; */
 
 
 .gameover-next {
-        
-        margin-bottom: 80px;
-        margin-left: 5%;
-        margin-top: 95%;
-        padding-left: 100px;
-        padding-right: 100px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-       
-        border-radius: 20px;
-        font-size: 30px;
-        text-decoration: none;
-        background-color: white;  
+    float:right;
+    margin-bottom: 80px;
+    margin-right: 5%;
+    margin-top: 40%;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    border-radius: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: white;  
 }
-
+.game-title {
+    background-image: url('./assets/Title.png');
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    height: 45%;
+    width: 700px;
+    margin-top: 1%;
+    /* background-color: white; */
+    align-content: center;
+    /* z-index: 2; */
+    margin-left: 19%;
+    padding-bottom: 10px;
+}
 
 
 
@@ -455,11 +479,11 @@ Font-Size: 16px; */
     .title {
       
        
-        
+        margin-left: 16%;
         /* background-color: white; */
         align-content: center;
-        /* z-index: 2; */
-        margin-left: 9%;
+        
+        /* margin-left: 2%; */
         padding-bottom: 100px;
     
     }
@@ -477,20 +501,39 @@ Font-Size: 16px; */
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
     
 
-.title {
-
-    width: 400px;
-    height: 400px;
+.title,  {
+    /* margin-left: 12%; */
+    width: 900px;
+    height: 800px;
 
 }
 
 .login-signup {
    
     width: 60vw;
-    height: 40vh; 
+    height: 40vh;  
 }
 
   }
+
+
+  @media (max-width: 900px) {
+    
+
+    .title, .prep-title {
+        margin-left: 22%;
+        width: 400px;
+        height: 400px;
+    
+    }
+    
+    .login-signup {
+       
+        width: 60vw;
+        height: 40vh; 
+    }
+    
+      }

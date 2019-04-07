@@ -8,6 +8,13 @@ const Home = (props) => {
         <div className="home-container">
             <div className="home-title"></div>
 
+        <div className="instructions">
+            <div className="instructions-img"></div>
+            <div className="instructions-text">USE ARROW KEYS TO MOVE TO CATCH ASTROIDS BEFORE THEY HIT EARTH</div>
+        </div>
+           
+            
+
 
             <div className="astroid-home"></div>
            <div class="fade"></div>
@@ -28,7 +35,7 @@ const Home = (props) => {
             </section>
            
             <button className="next-intro">
-                <Link to="/pages/prepare" component={Prepare}>NEXT</Link>
+                <Link to="/pages/game" component={Prepare}>NEXT</Link>
             </button>
         </div>
     )
