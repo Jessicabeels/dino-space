@@ -23,6 +23,7 @@ Font-Size: 16px; */
     margin-top: 20px;
     margin-left: 10px;
     padding-top: 5px;
+    Font-Family: 'Lato', Sans-Serif;
     padding-bottom: 5px;
     border-radius: 20px;
     font-size: 20px;
@@ -34,7 +35,7 @@ Font-Size: 16px; */
 /* ////////////////AUTH//////////////////////// */
 
 .auth-container {
-    background-image: url('./assets/space-background.png');
+    background-image: url('./assets/space-login-background.png');
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -69,7 +70,7 @@ Font-Size: 16px; */
     text-align: center;
     padding: 20px;
     margin-left: 36%;
-    margin-top: 25%;
+    margin-top: 35%;
     border-radius: 20px;
 }
 
@@ -155,11 +156,10 @@ Font-Size: 16px; */
     margin-top: 50px;
     width: 150px;
     height: 100px;
-    /* z-index: 9; */
     animation-name: astro-move;
     animation-duration: 10s;
     animation-direction: reverse;  
-    animation-iteration-count: 3;
+    animation-iteration-count: 2;
 }
 
 @keyframes astro-move {
@@ -180,17 +180,18 @@ Font-Size: 16px; */
 
   .next-intro{
       float:right;
-      /* margin-top: 30%; */
       margin-bottom: 80px;
       margin-right: 5%;
+      /* margin-top: 40%; */
       padding-left: 100px;
       padding-right: 100px;
       padding-top: 10px;
       padding-bottom: 10px;
+      Font-Family: 'Lato', Sans-Serif;
       border-radius: 20px;
       font-size: 30px;
       text-decoration: none;
-      background-color: white;
+      background-color: white;  
   }
 
   a:link {
@@ -201,11 +202,6 @@ Font-Size: 16px; */
    
    
 }
-
-  @keyframes button-animation {
-    from {background-color: white}
-    to {background-color: dodgerblue}
-  }
 
   
 
@@ -225,6 +221,7 @@ Font-Size: 16px; */
 
 .game-next {
     float:right;
+    z-index: 10;
     margin-bottom: 80px;
     margin-right: 5%;
     margin-top: 30%;
@@ -258,15 +255,16 @@ Font-Size: 16px; */
     position: absolute;
     width: 500px;
     height: 500px;
-    margin: 10%;
+    margin-left: 3%;
+    margin-top: 200px;
 }
 
 .instructions-img {
     
     background-image: url('./assets/arrow-keys.png');
-    background-color: #adccf8;
+    background-color: #ffffff;
     width: 200px;
-    height: 200px;
+    height: 150px;
     background-position: center;
     background-size: cover;
     border-radius: 20px;
@@ -274,12 +272,15 @@ Font-Size: 16px; */
 }
 
 .instructions-text {
-    color: white;
-    width: 250px;
-    height: 200px;
+    color: black;
+    width: 200px;
+    margin-top: 20px;
+    height: 250px;
     Font-Family: 'Lato', Sans-Serif;
     Font-Size: 23px;
     padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
     line-height: 30px;
     
     
@@ -357,7 +358,8 @@ Font-Size: 16px; */
     padding-right: 100px;
     padding-top: 10px;
     padding-bottom: 10px;
-    
+    Font-Family: 'Lato', Sans-Serif;
+    Font-Size: 23px;
     border-radius: 20px;
     font-size: 30px;
     text-decoration: none;
@@ -378,6 +380,22 @@ Font-Size: 16px; */
     padding-bottom: 10px;
 }
 
+.astro-count {
+    float:right;
+    position: absolute;
+    Font-Family: 'Lato', Sans-Serif;
+    Font-Size: 23px;
+    width: 300px;
+    text-align: center;
+    /* margin-bottom: 80px; */
+    margin-left: 120%;
+    margin-top: 15%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 200px;
+    height: 80px;
+
+}
 
 
 
@@ -403,14 +421,23 @@ Font-Size: 16px; */
 
 
 .play-again{
-    z-index: 10;
     position: absolute;
-    width: 200px;
-    margin-top: 100px;
-    height: 50px;
+    width: 500px;
+    margin-top: 70%;
+    margin-left: 30%;
+    text-align: center;
+    height: 60px;
     background-color: white;
+    Font-Family: 'Lato', Sans-Serif;
+    Font-Size: 23px;
+    border-radius: 20px;
+    z-index: 2;
 }
 
+.playAgainText {
+    text-align: center;
+    margin-left: 35%;
+}
 
 .gameOver-title {
     position: absolute;
@@ -455,7 +482,7 @@ Font-Size: 16px; */
   position: relative;
   top: 99999px;
   transform-origin: 50% 100%;
-  animation: crawl 80s linear;
+  animation: crawl 60s linear;
 }
 
 
@@ -476,17 +503,7 @@ Font-Size: 16px; */
 
 @media (min-height: 850px), (max-width: 800px ) {
 
-    .title {
-      
-       
-        margin-left: 16%;
-        /* background-color: white; */
-        align-content: center;
-        
-        /* margin-left: 2%; */
-        padding-bottom: 100px;
-    
-    }
+   
 
     .login-signup {
        
@@ -494,46 +511,48 @@ Font-Size: 16px; */
         height: 300px;
         padding: 20px;
         margin-left: 26%;
-        margin-top: 35%;
+        margin-top: 32%;
        
     }
     
 
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1600px) {
     
 
-.title,  {
-    /* margin-left: 12%; */
-    width: 900px;
-    height: 800px;
 
-}
 
 .login-signup {
-   
+    margin-top: 42%;
     width: 60vw;
-    height: 40vh;  
+      
 }
 
   }
 
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
     
 
-    .title, .prep-title {
-        margin-left: 22%;
-        width: 400px;
-        height: 400px;
-    
-    }
+   
     
     .login-signup {
        
         width: 60vw;
         height: 40vh; 
+        margin-top: 52%;
     }
     
       }
+
+      @media (max-width: 1000px) {
+    
+        .login-signup {
+           
+            width: 60vw;
+            height: 40vh; 
+            margin-top: 82%;
+        }
+        
+          }

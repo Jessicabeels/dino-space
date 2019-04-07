@@ -8,8 +8,8 @@ const GameOver = () => {
             {/* <div className="title"></div> */}
             <div className="gameOver-title"></div>
 
-            <button>
-                <Link to="/pages/game" className="play-again">PLAY AGAIN</Link>
+            <button className="play-again">
+                <Link to="/pages/game" className="playAgainText" >PLAY AGAIN</Link>
             </button>
 
 

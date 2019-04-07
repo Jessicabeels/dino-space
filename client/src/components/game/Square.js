@@ -103,13 +103,24 @@ class Square extends Component {
     
        return (
         <div className="game-page"> 
-            <GameInfo />
-            Astroids Destroyed: {this.state.astrosCounted} {this.state.destroyedAstros}
+            {/* <GameInfo /> */}
+            <div className="astro-count">
+                Astroids Destroyed: {this.state.destroyedAstros}
+            </div>
+            <div className="high-score">HIGH SCORE = {this.state.destroyedAstros}</div>
+            
            
            <div className="game-board">
                 <div className="player" style={{ top: this.state.playerY + "px", left: this.state.playerX + "px" }}></div>
             
-                {this.state.astroids.map(a => <Astroid key={a} speed={this.state.speed} astroidNumber={a} collisionOccured={this.collisionOccured} astroidX={Math.floor(Math.random() * 400)} astroidY={Math.floor(Math.random() * 100)} {...this.state} rProps={this.props}/>)}
+                {this.state.astroids.map(a => <Astroid key={a}
+                                                 speed={this.state.speed}
+                                                 astroidNumber={a}
+                                                 collisionOccured={this.collisionOccured}
+                                                 astroidX={Math.floor(Math.random() * 400)}
+                                                 astroidY={Math.floor(Math.random() * 200)}
+                                                 {...this.state}
+                                                 rProps={this.props}/>)}
            </div>
         </div>
            

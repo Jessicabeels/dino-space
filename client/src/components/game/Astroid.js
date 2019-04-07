@@ -51,8 +51,10 @@ class Astroid extends Component {
         if(this.state.astroidY === 530 ){
             console.log(' end the game Astroids Y is : ' + this.state.astroidY)
             // alert('game over')
-           
-            this.props.rProps.rProps.history.push("/pages/gameover")
+            setTimeout(() => {
+                this.props.rProps.rProps.history.push("/pages/gameover")
+            }, 200)
+            
            
             
             

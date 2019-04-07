@@ -17,12 +17,15 @@ const Game = (props) => {
             </div>
 
             
-            <button className="gameover-next">
+            {/* <button className="gameover-next">
                 <Link to="/pages/gameover" >NEXT</Link>
-            </button>
-            
+            </button> */}
 
-            {/* <GameInfo/> */}
+            <div className="instructions">
+                <div className="instructions-img"></div>
+                <div className="instructions-text">USE ARROW KEYS TO MOVE TO CATCH ASTROIDS BEFORE THEY HIT EARTH</div>
+            </div>
+            
             
         </div>
     )
