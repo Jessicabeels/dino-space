@@ -32,7 +32,7 @@ class App extends Component {
                         token={token}
                         path="/home"
                         redirectTo="/"
-                        component={Home}/>
+                        component={rProps => <Home {...rProps} />} />
                     <ProtectedRoute
                         token={token}
                         path="/pages/prepare"
@@ -42,12 +42,12 @@ class App extends Component {
                         token={token}
                         path="/pages/game"
                         redirectTo="/"
-                        component={Game}/>
+                        component={rProps => <Game {...rProps} />} />
                     <ProtectedRoute
                         token={token}
                         path="/pages/gameover" 
                         redirectTo="/"
-                        component={GameOver}/>
+                        component={rProps => <GameOver {...rProps} />} />
                     {/* <ProtectedRoute
                         token={token}
                         path="*"

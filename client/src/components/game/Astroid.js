@@ -44,20 +44,16 @@ class Astroid extends Component {
         
     }
 
-
-
-
-
-    //points counter in check collusion
-
+    
 
     checkImpactEarth = () => {
+        console.log(this.props.rProps.rProps.history)
         if(this.state.astroidY === 530 ){
             console.log(' end the game Astroids Y is : ' + this.state.astroidY)
-            alert('game over')
-            // setTimeout(() => {
-            //     this.props.history.push("/pages/gameover")
-            // }, 100)
+            // alert('game over')
+           
+            this.props.rProps.rProps.history.push("/pages/gameover")
+           
             
             
         }

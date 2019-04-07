@@ -4,7 +4,7 @@ import Square from '../game/Square'
 // import GameInfo from '../game/GameInfo.js'
 
 
-const Game = () => {
+const Game = (props) => {
     return (
         <div className="game-container">
             
@@ -13,7 +13,7 @@ const Game = () => {
             <div className="game-title"></div>
         
             <div className="stay-game">
-                <Square />
+                <Square rProps={props} />
             </div>
 
             
