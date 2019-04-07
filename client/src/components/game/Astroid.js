@@ -7,8 +7,7 @@ class Astroid extends Component {
         this.state = {
             astroidX: this.props.astroidX,
             astroidY: this.props.astroidY,
-            isAstroidMoving: true,
-            intervalID: ''
+            isAstroidMoving: true
         }
         this.level1 = null
     }

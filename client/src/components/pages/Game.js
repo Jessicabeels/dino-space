@@ -10,13 +10,13 @@ const Game = () => {
             
            
 
-            <div className="title"></div>
+            <div className="prep-title"></div>
         
             <div className="stay-game">
                 <Square />
             </div>
-            <button>
-                <Link to="/pages/gameover" className="gameover-next">NEXT</Link>
+            <button className="gameover-next">
+                <Link to="/pages/gameover" >NEXT</Link>
             </button>
 
             {/* <GameInfo/> */}

@@ -11,6 +11,10 @@ Font-Size: 16px; */
 
 
 
+
+
+
+
 .logout-button {
     position: absolute;
     float:right;
@@ -38,18 +42,21 @@ Font-Size: 16px; */
     
 }
 
+
+
 .title {
     background-image: url('./assets/Title.png');
     position: absolute;
+   
     background-position: center;
     background-size: cover;
-    height: 600px;
-    width: 700px;
+    height: 100%;
+    width: 100vw;
     /* background-color: white; */
     align-content: center;
     /* z-index: 2; */
-    margin-left: 200px;
-    padding: 10px;
+    margin-left: 9%;
+    padding-bottom: 10px;
 
 }
 
@@ -62,7 +69,7 @@ Font-Size: 16px; */
     text-align: center;
     padding: 20px;
     margin-left: 36%;
-    margin-top: 20%;
+    margin-top: 25%;
     border-radius: 20px;
 }
 
@@ -113,9 +120,9 @@ Font-Size: 16px; */
 
 /* /////////////////////HOME//////////// */
 .home-container {
-    background-color: lightcoral;
+    background-color: black;
     background-image: url('https://i.imgur.com/hMo1bw7.png');
-    height: 100vh;
+    height: 150vh;
     position: relative;
     background-position: center;
     background-size: cover;
@@ -124,6 +131,20 @@ Font-Size: 16px; */
 
 
 
+.home-title {
+    background-image: url('./assets/Title.png');
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    height: 40%;
+    width: 700px;
+    /* background-color: white; */
+    align-content: center;
+    /* z-index: 2; */
+    margin-left: 19%;
+    padding-bottom: 10px;
+
+}
 
 .astroid-home {
     position: absolute;
@@ -155,25 +176,21 @@ Font-Size: 16px; */
     
   }
 
-  .home-text {
-
-  }
+  
 
   .next-intro{
       float:right;
-      margin-top: 30%;
+      /* margin-top: 30%; */
+      margin-bottom: 80px;
       margin-right: 5%;
-      padding-left: 80px;
-      padding-right: 80px;
+      padding-left: 100px;
+      padding-right: 100px;
       padding-top: 10px;
       padding-bottom: 10px;
       border-radius: 20px;
       font-size: 30px;
-      /* margin: 40px; */
       text-decoration: none;
       background-color: white;
-      animation-name: button-animation;
-      animation-delay: 1s;
   }
 
   a:link {
@@ -190,7 +207,7 @@ Font-Size: 16px; */
     to {background-color: dodgerblue}
   }
 
-
+  
 
 
 
@@ -206,6 +223,56 @@ Font-Size: 16px; */
     background-size: cover;
 }
 
+.game-next {
+    float:right;
+    margin-bottom: 80px;
+    margin-right: 5%;
+    margin-top: 30%;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: white;
+}
+
+.prep-title {
+    background-image: url('./assets/Title.png');
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    height: 55%;
+    width: 600px;
+    margin-top: 1%;
+    /* background-color: white; */
+    align-content: center;
+    /* z-index: 2; */
+    margin-left: 19%;
+    padding-bottom: 10px;
+
+}
+
+.instructions-img {
+    position: absolute;
+    background-image: url('./assets/arrow-keys.png');
+    background-color: #adccf8;
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    margin: 20%;
+}
+
+.instructions-text {
+    color: white;
+    width: 200px;
+    height: 200px;
+    
+    
+}
 
 /* //////////////////////////////PREPARE ///////////////////////*/
 
@@ -217,6 +284,7 @@ Font-Size: 16px; */
     background-position: center;
     background-size: cover;
     position: relative;
+    align-items: center;
     
 }
 
@@ -235,6 +303,7 @@ Font-Size: 16px; */
     position: relative;
     border: 3px whitesmoke solid;
     z-index: 1;
+    
 }
 
 .player {
@@ -269,20 +338,19 @@ Font-Size: 16px; */
 
 
 .gameover-next {
-    /* float:right; */
-    margin-top: 30%;
-    margin-right: 55%;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 20px;
-    font-size: 30px;
-    /* margin: 40px; */
-    text-decoration: none;
-    background-color: white;
-    animation-name: button-animation;
-    animation-delay: 1s;
+        
+        margin-bottom: 80px;
+        margin-left: 5%;
+        margin-top: 95%;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+       
+        border-radius: 20px;
+        font-size: 30px;
+        text-decoration: none;
+        background-color: white;  
 }
 
 
@@ -348,7 +416,7 @@ Font-Size: 16px; */
   display: flex;
   justify-content: center;
   position: relative;
-  height: 800px;
+  height: 300px;
   color: #feda4a;
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 500%;
@@ -363,7 +431,7 @@ Font-Size: 16px; */
   position: relative;
   top: 99999px;
   transform-origin: 50% 100%;
-  animation: crawl 60s linear;
+  animation: crawl 80s linear;
 }
 
 
@@ -377,3 +445,52 @@ Font-Size: 16px; */
     transform: rotateX(25deg) translateZ(-2500px);
   }
 }
+
+
+
+/* ////////////////////////////////////Media queries///////////////////////////////// */
+
+@media (min-height: 850px), (max-width: 800px ) {
+
+    .title {
+      
+       
+        
+        /* background-color: white; */
+        align-content: center;
+        /* z-index: 2; */
+        margin-left: 9%;
+        padding-bottom: 100px;
+    
+    }
+
+    .login-signup {
+       
+        width: 800px;
+        height: 300px;
+        padding: 20px;
+        margin-left: 26%;
+        margin-top: 35%;
+       
+    }
+    
+
+}
+
+@media (max-width: 800px) {
+    
+
+.title {
+
+    width: 400px;
+    height: 400px;
+
+}
+
+.login-signup {
+   
+    width: 60vw;
+    height: 40vh; 
+}
+
+  }

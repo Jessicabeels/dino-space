@@ -9,7 +9,7 @@ const GameInfo = (props) => {
     
     return(
         <div>
-               HI +
+             
         </div>
     )
     

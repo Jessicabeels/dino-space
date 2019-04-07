@@ -12,7 +12,8 @@ class Square extends Component {
             playerB: 250,
             astroids: [],
             destroyedAstros: [],
-            speed: 1
+            speed: 1,
+            astrosCounted: 0
             // isAstroidMoving: true
         }
 
@@ -48,11 +49,13 @@ class Square extends Component {
 
     collisionOccured = (astroidNum) => {
         console.log(astroidNum)
+        
         this.setState(prevState => ({ 
             astroids: prevState.astroids.filter(a => a !== astroidNum), 
             destroyedAstros: [...prevState.destroyedAstros, astroidNum]
             
         }), () => {
+            
             if(!this.state.astroids.length){
                 this.levelUp()
             }
@@ -63,16 +66,20 @@ class Square extends Component {
     }
 
    astroCount = () => {
-       let astrosCounted = 0
-       if(this.destroyedAstros){
-            astrosCounted ++
-       }
+    if(1 === 1){
+        this.setState(p => ({
+             astrosCounted: p.astroCount ++
+        }))        
+    
+}
+       
    }
 
 
     levelUp = ()=> {
         this.setState(p => ({astroids: p.destroyedAstros.map(a => a + 5), destroyedAstros: [], speed: p.speed + 1}))
-        
+    
+       
     }
 
 
@@ -82,17 +89,15 @@ class Square extends Component {
 
    render(){
        
-    // console.log("the destroyed ASTROS" + this.destroyedAstros)
+   
     
        return (
         <div className="game-page"> 
             <GameInfo />
+            Astroids Destroyed: {this.state.astrosCounted}
            
            <div className="game-board">
                 <div className="player" style={{ top: this.state.playerY + "px", left: this.state.playerX + "px" }}></div>
-                {/* <Astroid astroidX={100} astroidY={150} {...this.state}/>
-                <Astroid astroidX={250} astroidY={100} {...this.state}/>
-                <Astroid astroidX={400} astroidY={150} {...this.state}/> */}
             
                 {this.state.astroids.map(a => <Astroid key={a} speed={this.state.speed} astroidNumber={a} collisionOccured={this.collisionOccured} astroidX={Math.floor(Math.random() * 400)} astroidY={Math.floor(Math.random() * 100)} {...this.state}/>)}
            </div>
