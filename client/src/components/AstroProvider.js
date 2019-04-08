@@ -110,14 +110,10 @@ class AstroProvider extends Component {
         
         this.setState(prevState => ({ 
             astroids: prevState.astroids.filter(a => a !== astroidNum), 
-            destroyedAstros: prevState.destroyedAstros += 1
+            destroyedAstros: prevState.destroyedAstros + 1
             
         }), () => this.astroCount() ) 
-        // {
-        //     console.log(this.state.destroyedAstros)
-        //     if(!this.state.astroids.length){
-        //         this.levelUp()
-        //     }
+  
         
         
         // REceive which astroid had the collison
@@ -129,11 +125,7 @@ class AstroProvider extends Component {
        console.log(this.state.astroids)
         if(this.state.destroyedAstros % 5 === 0){
                 this.levelUp()
-            }
-    // if(this.destroyedAstros > 0){
-    //     this.setState(p => ({
-    //          astrosCounted: p.astroCount ++
-    //     }))        
+            }      
     
 }
        
@@ -164,7 +156,20 @@ class AstroProvider extends Component {
                getUsers: this.getUsers,
                saveScores: this.saveScores,
                newScores: this.newScores,
-               
+               highscore: this.state.highscore, 
+               usersArr: this.state.usersArr,
+               collisionOccured: this.collisionOccured,
+               points: this.state.points,
+               endGameMsg: this.state.endGameMsg,        
+               playerX: this.state.playerX,
+               playerY: this.state.playerY,
+               playerA: this.state.playerA,
+               playerB: this.state.playerB,
+               astroids: this.state.astroids,
+               destroyedAstros: this.state.destroyedAstros,
+               speed: this.state.speed,
+               astrosCounted: this.astrosCounted,
+               isFlipped: this.state.isFlipped,
                ...this.state
            }}>
                 {this.props.children}

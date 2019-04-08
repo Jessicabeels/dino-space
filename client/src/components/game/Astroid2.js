@@ -47,12 +47,12 @@ class Astroid extends Component {
     
 
     checkImpactEarth = () => {
-        console.log(this.props.history)
+        console.log(this.props.rProps.rProps.history)
         if(this.state.astroidY >= 530 ){
             console.log(' end the game Astroids Y is : ' + this.state.astroidY)
             // alert('game over')
             setTimeout(() => {
-                this.props.history.push("/pages/gameover")
+                this.props.rProps.rProps.history.push("/pages/gameover")
             }, 200)
             
            
@@ -88,5 +88,3 @@ class Astroid extends Component {
 
 
 export default Astroid
-
-
