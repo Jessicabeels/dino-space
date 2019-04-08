@@ -553,13 +553,28 @@ Font-Size: 16px; */
     
       }
 
-      @media (max-width: 1000px) {
+@media (max-width: 1000px) {
+
+.login-signup {
     
-        .login-signup {
-           
-            width: 60vw;
-            height: 40vh; 
-            margin-top: 82%;
-        }
+    width: 60vw;
+    height: 40vh; 
+    margin-top: 82%;
+}
+
+    }
+
+@media (min-width: 700px){
+    .game-board {
+        margin-top: 180px;
+        width: 300px;
+        height: 600px;
+        background-position: center;
+        background-size: cover;
+        background-image: url('./assets/earth-gameboard.png');
+        position: relative;
+        border: 3px whitesmoke solid;
+        z-index: 1;
         
-          }
+    }
+    }
