@@ -72,7 +72,7 @@ Font-Size: 16px; */
     height: 500px;
     /* margin: 0 auto; */
     border: 30px;
-    margin-top: 160px;
+    margin-top: 200px;
     display: block;
     max-width: 100%;
     top: 50%;
@@ -102,7 +102,7 @@ Font-Size: 16px; */
 }
 
 .login-button{
-    padding: 10px;
+    padding: 15px;
     border-radius: 30px;
     width: 150px;
     background-color: black;
@@ -116,7 +116,7 @@ Font-Size: 16px; */
     background-color: black;
     color: white;
     border-radius: 30px;
-    padding: 5px;
+    padding: 10px;
 }
 
 
@@ -139,21 +139,24 @@ Font-Size: 16px; */
 }
 
 
-
-.home-title {
-    background-image: url('./assets/Title.png');
-    position: absolute;
-    background-position: center;
-    background-size: cover;
-    height: 40%;
-    width: 1000px;
-    /* background-color: white; */
-    align-content: center;
-    /* z-index: 2; */
-    margin-left: 19%;
+.next-intro{
+    float:right;
+    position: relative;
+    z-index: 5000;
+    margin-bottom: 80px;
+    margin-right: 5%;
+    /* margin-top: 40%; */
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 10px;
     padding-bottom: 10px;
-
+    font-family: 'Lato', Sans-Serif;
+    border-radius: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: white;  
 }
+
 
 .astroid-home {
     position: absolute;
@@ -186,22 +189,7 @@ Font-Size: 16px; */
 
   
 
-  .next-intro{
-      float:right;
-      margin-bottom: 80px;
-      margin-right: 5%;
-      /* margin-top: 40%; */
-      padding-left: 100px;
-      padding-right: 100px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      Font-Family: 'Lato', Sans-Serif;
-      border-radius: 20px;
-      font-size: 30px;
-      text-decoration: none;
-      background-color: white;  
-  }
-
+  
   a:link {
     text-decoration: none;
     display: flex;
@@ -265,15 +253,15 @@ Font-Size: 16px; */
     position: absolute;
     width: 500px;
     height: 300px;
-    margin-left: 3%;
-    margin-top: 200px;
+    margin-left: 60%;
+    margin-top: 320px;
 }
 
 .instructions-img {
     
     background-image: url('./assets/arrow-keys.png');
     background-color: #ffffff;
-    width: 200px;
+    width: 250px;
     height: 150px;
     background-position: center;
     background-size: cover;
@@ -283,9 +271,10 @@ Font-Size: 16px; */
 
 .instructions-text {
     color: black;
-    width: 200px;
+    width: 250px;
     margin-top: 20px;
-    height: 100px;
+    
+    height: 150px;
     Font-Family: 'Lato', Sans-Serif;
     Font-Size: 23px;
     padding: 20px;
@@ -411,8 +400,8 @@ Font-Size: 16px; */
     width: 300px;
     text-align: center;
     /* margin-bottom: 80px; */
-    margin-left: 120%;
-    margin-top: 15%;
+    margin-left: 105%;
+    margin-top: 45%;
     background-color: #ffffff;
     border-radius: 20px;
     width: 200px;
@@ -481,7 +470,7 @@ Font-Size: 16px; */
   position: relative;
   width: 100%;
   min-height: 60vh;
-  top: -25px;
+  /* top: -25px; */
   /* background-image: linear-gradient(0deg, transparent, black 75%); */
   /* z-index: 1; */
 }
@@ -503,7 +492,8 @@ Font-Size: 16px; */
 
 .crawl {
   position: relative;
-  top: 99999px;
+  /* top: 99999px; */
+  z-index: 10;
   transform-origin: 50% 100%;
   animation: crawl 60s linear;
 }
@@ -587,7 +577,7 @@ Font-Size: 16px; */
 @media (min-width: 700px){
 
 
-    .instructions {
+    /* .instructions {
      
         margin-top: 200px;
     }
@@ -609,7 +599,7 @@ Font-Size: 16px; */
         color: black;
         width: 250px;
         margin-top: 20px;
-        height: 350px;
+       
         Font-Family: 'Lato', Sans-Serif;
         Font-Size: 23px;
         padding: 20px;
@@ -618,7 +608,7 @@ Font-Size: 16px; */
         line-height: 30px;
         
         
-    }
+    } */
 
 
     .astro-count {

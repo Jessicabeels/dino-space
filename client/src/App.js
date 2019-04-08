@@ -4,7 +4,7 @@ import { withUser } from './context/UserProvider.js'
 import Auth from './components/Auth.js'
 import ProtectedRoute from './shared/ProtectedRoute.js'
 
-import NotFound from './components/pages/NotFound.js'
+// import NotFound from './components/pages/NotFound.js'
 import Home from './components/pages/Home.js'
 
 import Game from './components/pages/Game.js'

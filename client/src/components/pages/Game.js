@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Square from '../game/Square'
 // import GameInfo from '../game/GameInfo.js'
 
@@ -23,7 +23,8 @@ const Game = (props) => {
 
             <div className="instructions">
                 <div className="instructions-img"></div>
-                <div className="instructions-text">USE ARROW KEYS TO MOVE TO CATCH ASTROIDS BEFORE THEY HIT EARTH</div>
+                <div className="instructions-text">USE ARROW KEYS TO CATCH ASTROIDS BEFORE THEY HIT EARTH</div>
+                <div className="astroCount"></div>
             </div>
             
             
