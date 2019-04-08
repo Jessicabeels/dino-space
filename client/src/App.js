@@ -6,7 +6,7 @@ import ProtectedRoute from './shared/ProtectedRoute.js'
 
 import NotFound from './components/pages/NotFound.js'
 import Home from './components/pages/Home.js'
-import Prepare from './components/pages/Prepare'
+
 import Game from './components/pages/Game.js'
 import GameOver from './components/pages/GameOver'
 import './style.css'
@@ -33,11 +33,11 @@ class App extends Component {
                         path="/home"
                         redirectTo="/"
                         component={rProps => <Home {...rProps} />} />
-                    <ProtectedRoute
+                    {/* <ProtectedRoute
                         token={token}
                         path="/pages/prepare"
                         redirectTo="/"
-                        component={Prepare}/>
+                        component={Prepare}/> */}
                     <ProtectedRoute
                         token={token}
                         path="/pages/game"

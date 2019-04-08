@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Astroid from './Astroid'
-import GameInfo from './GameInfo'
 
 class Square extends Component {
     constructor(){
@@ -32,6 +31,7 @@ class Square extends Component {
     movePlayer = e => {
         if(e.which === 37){
             console.log('37 = left')
+            //.addClass('switch'))???
             this.setState(prevState => ({playerX: prevState.playerX > 0 ? prevState.playerX -15  : prevState.playerX }))
         } else if(e.which === 39){
             console.log('39 = right')
@@ -86,7 +86,7 @@ class Square extends Component {
         // this.setState(p => ({astroids: p.destroyedAstros.map(a => a + 5), speed: p.speed + 1}))
         this.setState(prevState => ({ 
             astroids: [1, 2, 3, 4, 5], 
-            speed: prevState.speed += 1
+            speed: prevState.speed += .5
             
         }) ) 
        
@@ -103,11 +103,11 @@ class Square extends Component {
     
        return (
         <div className="game-page"> 
-            {/* <GameInfo /> */}
+           
             <div className="astro-count">
                 Astroids Destroyed: {this.state.destroyedAstros}
             </div>
-            <div className="high-score">HIGH SCORE = {this.state.destroyedAstros}</div>
+            {/* <div className="high-score">HIGH SCORE = {this.state.destroyedAstros}</div> */}
             
            
            <div className="game-board">

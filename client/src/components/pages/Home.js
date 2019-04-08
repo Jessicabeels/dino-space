@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Game from './Game'
 
-import Prepare from './Prepare';
 
 const Home = (props) => {
     return (
@@ -23,7 +23,7 @@ const Home = (props) => {
             <div class="crawl">
                 
                 
-                <p>Millions of years ago, the dinosaurs of Earth's peaceful existence was interrupted by a fiery meteorite that devestated the planet and left no survivors.</p>
+                <p>Millions of years ago, the dinos had their peaceful existence interrupted by a fiery meteorite that devestated the planet and left no survivors.</p>
                 <br></br>
                 <p>Or did it?</p>
                 <br></br>
@@ -35,7 +35,7 @@ const Home = (props) => {
             </section>
            
             <button className="next-intro">
-                <Link to="/pages/game" component={Prepare}>NEXT</Link>
+                <Link to="/pages/game" component={Game}>NEXT</Link>
             </button>
         </div>
     )

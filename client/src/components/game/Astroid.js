@@ -26,11 +26,11 @@ class Astroid extends Component {
     }
 
     checkCollision = () => {
-        // console.log(' A x is : ' + this.state.astroidX)
-        // console.log(' A y is : ' + this.state.astroidY)
-        // console.log(' P x is : ' + this.props.playerX)
-        // console.log(' P y is : ' + this.state.playerY)
-        if (this.state.astroidY < this.props.playerY +15 && this.state.astroidY > this.props.playerY -15) { 
+        console.log(' A x is : ' + this.state.astroidX)
+        console.log(' A y is : ' + this.state.astroidY)
+        console.log(' P x is : ' + this.props.playerX)
+        console.log(' P y is : ' + this.state.playerY)
+        if (this.state.astroidY < this.props.playerY +20 && this.state.astroidY > this.props.playerY -20) { 
             if(this.state.astroidX < this.props.playerX +75 && this.state.astroidX > this.props.playerX -75){
                 console.log('COLLISION -----------------------------------')
                 this.setState({
@@ -48,7 +48,7 @@ class Astroid extends Component {
 
     checkImpactEarth = () => {
         console.log(this.props.rProps.rProps.history)
-        if(this.state.astroidY === 530 ){
+        if(this.state.astroidY >= 530 ){
             console.log(' end the game Astroids Y is : ' + this.state.astroidY)
             // alert('game over')
             setTimeout(() => {

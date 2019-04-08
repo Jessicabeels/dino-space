@@ -23,6 +23,7 @@ app.use("/api", expressJwt({secret: process.env.SECRET})) //req.user
 
 //Routes
 app.use("/auth", require('./routes/authRoutes.js'))
+app.use("/scores", require('./routes/scoreRoutes.js'))
 
 
 
