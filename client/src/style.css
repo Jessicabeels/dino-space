@@ -40,6 +40,7 @@ Font-Size: 16px; */
     background-position: center;
     background-size: cover;
     position: relative;
+    width: 100%;
     
 }
 
@@ -63,15 +64,21 @@ Font-Size: 16px; */
 
 .login-signup {
     background-color: white;
-    width: 400px;
-    height: 400px;
     position: absolute;
     align-content: center;
     text-align: center;
     padding: 20px;
-    margin-left: 36%;
-    margin-top: 35%;
+    width: 500px;
+    height: 500px;
+    /* margin: 0 auto; */
+    border: 30px;
+    margin-top: 160px;
+    display: block;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
     border-radius: 20px;
+    transform: translate(-50%, -50%);
 }
 
 .auth-form {
@@ -102,6 +109,7 @@ Font-Size: 16px; */
     color: white;
     font-size: 30px;
     z-index: 10;
+    
 }
 
 .toggle-button {
@@ -122,7 +130,7 @@ Font-Size: 16px; */
 /* /////////////////////HOME//////////// */
 .home-container {
     background-color: black;
-    background-image: url('https://i.imgur.com/hMo1bw7.png');
+    background-image: url('./assets/space-title-only.png');
     height: 150vh;
     position: relative;
     background-position: center;
@@ -138,7 +146,7 @@ Font-Size: 16px; */
     background-position: center;
     background-size: cover;
     height: 40%;
-    width: 800px;
+    width: 1000px;
     /* background-color: white; */
     align-content: center;
     /* z-index: 2; */
@@ -203,7 +211,9 @@ Font-Size: 16px; */
    
 }
 
-  
+
+
+
 
 
 
@@ -241,7 +251,7 @@ Font-Size: 16px; */
     background-position: center;
     background-size: cover;
     height: 55%;
-    width: 600px;
+    width: 700px;
     margin-top: 1%;
     /* background-color: white; */
     align-content: center;
@@ -254,7 +264,7 @@ Font-Size: 16px; */
 .instructions {
     position: absolute;
     width: 500px;
-    height: 500px;
+    height: 300px;
     margin-left: 3%;
     margin-top: 200px;
 }
@@ -275,7 +285,7 @@ Font-Size: 16px; */
     color: black;
     width: 200px;
     margin-top: 20px;
-    height: 250px;
+    height: 100px;
     Font-Family: 'Lato', Sans-Serif;
     Font-Size: 23px;
     padding: 20px;
@@ -292,7 +302,7 @@ Font-Size: 16px; */
 .game-container {
     background-color: lightseagreen;
     height: 100vh;
-    background-image: url('./assets/game-background.png');
+    background-image: url('./assets/space-background.png');
     background-position: center;
     background-size: cover;
     position: relative;
@@ -302,11 +312,14 @@ Font-Size: 16px; */
 
 
 
-
-
-
 .game-board {
-    margin-top: 180px;
+    margin-top: 90%;
+    display: block;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
     width: 600px;
     height: 600px;
     background-position: center;
@@ -327,6 +340,16 @@ Font-Size: 16px; */
     height: 90px;
     z-index: 10;
 
+}
+
+
+.player-flipped {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
 }
 
 .astroid {
@@ -352,8 +375,8 @@ Font-Size: 16px; */
 .gameover-next {
     float:right;
     margin-bottom: 80px;
-    margin-right: 5%;
-    margin-top: 40%;
+    /* margin-right: 5%; */
+    margin-top: 400px;
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 10px;
@@ -397,15 +420,6 @@ Font-Size: 16px; */
 
 }
 
-.switch {
-    animation: switching
-}
-
-@keyframes switching {
-     from { -moz-transform: rotate(0deg);}
-     to { -moz-transform: rotate(360deg);}
-}
-
 
 /* /////////GAME//////////////////////////// */
 
@@ -423,6 +437,7 @@ Font-Size: 16px; */
     position: relative;
     background-color: black;
     overflow: hidden;
+    align-items: center;
    
 }
 
@@ -430,8 +445,9 @@ Font-Size: 16px; */
 .play-again{
     position: absolute;
     width: 500px;
-    margin-top: 17%;
-    margin-left: 30%;
+    align-items: center;
+    margin-top: 27%;
+    margin-left: 35%;
     text-align: center;
     height: 60px;
     background-color: white;
@@ -511,16 +527,16 @@ Font-Size: 16px; */
 @media (min-height: 850px), (max-width: 800px ) {
 
    
-
+/* 
     .login-signup {
        
         width: 800px;
         height: 300px;
         padding: 20px;
-        margin-left: 26%;
-        margin-top: 32%;
+        margin-left: 40%;
+        margin-top: 22%;
        
-    }
+    } */
     
 
 }
@@ -530,11 +546,13 @@ Font-Size: 16px; */
 
 
 
-.login-signup {
-    margin-top: 42%;
+/* .login-signup {
+    margin-top: 55%;
     width: 60vw;
+   
+    
       
-}
+} */
 
   }
 
@@ -544,37 +562,77 @@ Font-Size: 16px; */
 
    
     
-    .login-signup {
+    /* .login-signup {
        
         width: 60vw;
         height: 40vh; 
         margin-top: 52%;
-    }
+        
+    } */
     
       }
 
 @media (max-width: 1000px) {
 
-.login-signup {
+/* .login-signup {
     
     width: 60vw;
     height: 40vh; 
     margin-top: 82%;
-}
+    
+} */
 
     }
 
 @media (min-width: 700px){
-    .game-board {
-        margin-top: 180px;
-        width: 300px;
-        height: 600px;
+
+
+    .instructions {
+     
+        margin-top: 200px;
+    }
+    
+    .instructions-img {
+        
+        background-image: url('./assets/arrow-keys.png');
+        background-color: #ffffff;
+        width: 250px;
+        height: 150px;
         background-position: center;
         background-size: cover;
-        background-image: url('./assets/earth-gameboard.png');
-        position: relative;
-        border: 3px whitesmoke solid;
-        z-index: 1;
+        border-radius: 20px;
+      
         
+    }
+    
+    .instructions-text {
+        color: black;
+        width: 250px;
+        margin-top: 20px;
+        height: 350px;
+        Font-Family: 'Lato', Sans-Serif;
+        Font-Size: 23px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        line-height: 30px;
+        
+        
+    }
+
+
+    .astro-count {
+        
+        position: absolute;
+        Font-Family: 'Lato', Sans-Serif;
+        Font-Size: 23px;
+        width: 300px;
+        text-align: center;
+        margin-top: 15%;
+        background-color: #ffffff;
+        border-radius: 20px;
+        width: 200px;
+        height: 80px;
+    
     }
     }

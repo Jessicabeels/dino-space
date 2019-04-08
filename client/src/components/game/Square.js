@@ -12,7 +12,8 @@ class Square extends Component {
             astroids: [],
             destroyedAstros: 0,
             speed: 1,
-            astrosCounted: 0
+            astrosCounted: 0,
+            isFlipped: false
             // isAstroidMoving: true
         }
 
@@ -32,10 +33,18 @@ class Square extends Component {
         if(e.which === 37){
             console.log('37 = left')
             //.addClass('switch'))???
-            this.setState(prevState => ({playerX: prevState.playerX > 0 ? prevState.playerX -15  : prevState.playerX }))
+            this.setState(prevState => 
+                ({ isFlipped: false,
+                    playerX: prevState.playerX > 0
+                    ? prevState.playerX -15
+                    : prevState.playerX }))
         } else if(e.which === 39){
             console.log('39 = right')
-            this.setState(prevState => ({ playerX: prevState.playerX < 400 ? prevState.playerX + 15 : prevState.playerX }))
+            this.setState(prevState => ({
+                    isFlipped :true,
+                    playerX: prevState.playerX < 400
+                    ? prevState.playerX + 15
+                    : prevState.playerX }))
         } else if(e.which === 38){
             console.log('38 = top')
             this.setState(prevState => ({playerY: prevState.playerY > 10 ? prevState.playerY -15 : prevState.playerY  }))
@@ -86,7 +95,8 @@ class Square extends Component {
         // this.setState(p => ({astroids: p.destroyedAstros.map(a => a + 5), speed: p.speed + 1}))
         this.setState(prevState => ({ 
             astroids: [1, 2, 3, 4, 5], 
-            speed: prevState.speed += .5
+            speed: prevState.speed += .5,
+
             
         }) ) 
        
@@ -111,8 +121,12 @@ class Square extends Component {
             
            
            <div className="game-board">
-                <div className="player" style={{ top: this.state.playerY + "px", left: this.state.playerX + "px" }}></div>
-            
+                {this.state.isFlipped 
+                ?
+                <div className="player player-flipped"  style={{ top: this.state.playerY + "px", left: this.state.playerX + "px" }}></div>
+                :
+                <div className="player"  style={{ top: this.state.playerY + "px", left: this.state.playerX + "px" }}></div>
+                }
                 {this.state.astroids.map(a => <Astroid key={a}
                                                  speed={this.state.speed}
                                                  astroidNumber={a}

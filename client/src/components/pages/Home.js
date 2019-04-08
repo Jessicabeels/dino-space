@@ -6,7 +6,7 @@ import Game from './Game'
 const Home = (props) => {
     return (
         <div className="home-container">
-            <div className="home-title"></div>
+            {/* <div className="home-title"></div> */}
 
         <div className="instructions">
             <div className="instructions-img"></div>

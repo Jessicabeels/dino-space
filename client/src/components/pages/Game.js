@@ -10,7 +10,7 @@ const Game = (props) => {
             
            
 
-            <div className="game-title"></div>
+            {/* <div className="game-title"></div> */}
         
             <div className="stay-game">
                 <Square rProps={props} />
