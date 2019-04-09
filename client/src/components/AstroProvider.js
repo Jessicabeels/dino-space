@@ -27,6 +27,34 @@ class AstroProvider extends Component {
 
     }
 
+    componentDidMount(){
+        window.addEventListener("keydown", this.movePlayer)
+        window.addEventListener("keydown", this.pauseGame)
+        
+        this.setState({astroids: [1, 2, 3, 4, 5]})
+        // this.moveAstroid()
+    }
+
+    componentWillUnmount(){
+        window.addEventListener("keydown", this.movePlayer)
+        window.addEventListener("keyup", this.pauseGame)
+    }
+
+    pauseGame = (e) => {
+        if(e.which === 32){
+            this.setState({
+                speed: 0,
+                isPaused: true
+            })
+        } else {
+            e.preventDefault()
+            this.setState({
+                speed: 1,
+                isPaused: false
+               
+            })
+        }
+    }
     
 
     getUsers = () => {
@@ -80,17 +108,7 @@ class AstroProvider extends Component {
         }
     }
 
-    componentDidMount(){
-        window.addEventListener("keydown", this.movePlayer)
-        this.setState({astroids: [1, 2, 3, 4, 5]})
-        // this.moveAstroid()
-    }
-
-    componentWillUnmount(){
-        window.addEventListener("keydown", this.movePlayer)
-        window.addEventListener("keydown", this.pauseGame)
-    }
-
+   
     movePlayer = e => {
         if(e.which === 37){
             console.log('37 = left')
@@ -114,19 +132,7 @@ class AstroProvider extends Component {
             console.log('40 = bottom')
             this.setState(prevState => ({ playerY: prevState.playerY < 490 ? prevState.playerY + 15 : prevState.playerY }))
         } 
-        if(e.which === 32){
-            this.setState({
-                speed: 0,
-                isPaused: true
-            })
-        } else if(e.which === 13){
-            e.preventDefault()
-            this.setState({
-                speed: 1,
-                isPaused: false
-               
-            })
-        }
+        
     }
 
     //how many astroidNums are there? if collision occurred then increcemnt 

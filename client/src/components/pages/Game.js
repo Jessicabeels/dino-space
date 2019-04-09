@@ -24,7 +24,7 @@ const Game = (props) => {
 
             {/* <div className="instructions">
                 <div className="instructions-img"></div>
-                <div className="instructions-text">USE ARROW KEYS TO CATCH ASTROIDS BEFORE THEY HIT EARTH</div>
+                <div className="instructions-text">Use ARROW KEYS to stop ASTROIDS before they EARTH</div>
                 <div className="instructions-text">Press Space to Pause</div>
                 <div className="instructions-text">Press Enter to unpause</div>
 

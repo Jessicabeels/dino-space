@@ -251,9 +251,10 @@ Font-Size: 16px; */
 
 .instructions {
     position: absolute;
+    background-color: red;
     width: 500px;
     height: 300px;
-    margin-left: 105%;
+    /* margin-left: 105%; */
     /* margin-top: 320px; */
 }
 
@@ -291,8 +292,7 @@ Font-Size: 16px; */
     color: black;
     width: 250px;
     margin-top: 20px;
-    
-    height: 150px;
+    height: 110px;
     Font-Family: 'Lato', Sans-Serif;
     Font-Size: 23px;
     padding: 20px;
@@ -315,26 +315,21 @@ Font-Size: 16px; */
   .main,
   .sidebar {
     /* border: 3px solid black; */
-    margin-top: 40%;
+    margin-top: 47%;
     padding: 15px;
-    /* background-color: #fff; */
+    /* b ackground-color: #fff; */
   }
-  
-  /* .main {
-    width: 60%;
-    height: 150vh;
-  } */
   
   .sidebar {
-    width: 25%;
-    height: 25vh;
+    /* width: 25%; */
+    Font-Family: 'Arvo', Serif;
+    height: 40vh;
+    margin-left: 35px;
+    background-color:rgb(175, 60, 60);
+    border-radius: 20px;
   }
   
-  body {
-    background-color: #ccc;
-    font-family: sans-serif;
-    padding: 10px;
-  }
+
 
 /* //////////////////////////////PREPARE ///////////////////////*/
 
@@ -353,15 +348,16 @@ Font-Size: 16px; */
 
 
 .game-board {
-    margin-top: 400px;
+    margin-top: 700px;
     display: block;
     max-width: 100%;
     top: 50%;
     left: 50%;
     border-radius: 20px;
     transform: translate(-50%, -50%);
-    width: 600px;
+    width: 650px;
     height: 600px;
+    /* border: 10px solid white; */
     background-position: center;
     background-size: cover;
     background-image: url('./assets/earth-gameboard.png');

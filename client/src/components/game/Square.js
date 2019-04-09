@@ -49,7 +49,7 @@ const Square = (props) => {
                     <div className="astro-count">Astroids Destroyed: {destroyedAstros}</div>
                     {/* <div className="high-score">HIGH SCORE = {highscore}</div> */}
                     <div className="instructions-img"></div>
-                    <div className="instructions-text">USE ARROW KEYS TO CATCH ASTROIDS BEFORE THEY HIT EARTH</div>
+                    <div className="instructions-text">Use arrow keys to stop astroids before they hit Earth</div>
                     <div className="instructions-text">Space = Pause<br></br>Enter = unpause</div>
                     
                 </div>
