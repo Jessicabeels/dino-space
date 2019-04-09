@@ -21,45 +21,57 @@ class AstroProvider extends Component {
             destroyedAstros: 0,
             speed: 1,
             astrosCounted: 0,
-            isFlipped: false
+            isFlipped: false,
+            isPaused: false
         }
 
     }
 
-
+    
 
     getUsers = () => {
-        Axios.get("/users").then(res => {
+        Axios.get('/users').then(res => {
             this.setState({usersArr: res.data})
         })
     }
 
 
     saveScores = () => {
-      Axios.get('/users').then(res => {
+      Axios.get('/scores').then(res => {
           this.setState({highscore: res.data})
       })
     }
 
+    selectUser = id => {
+        this.state.usersArr.map((user, i) => {
+            document.getElementsByClassName('user-card')[i].classList.remove('overlay')
+            return user._id !== id ? document.getElementsByClassName('user-card')[i].classList.add('overlay') :
+                this.setState({
+                    user: user,
+                    canPlay: true
+            })
+        })
+    }
+
     newScores = () => {
         let{first, second, third, _id} = this.state.highscore[0]
-        let {points} = this.state
-        if(points > first){
-            Axios.put(`scores.${_id}`, {first: points, "second": first, "third": second}).then(res => {
+        let {destroyedAstros} = this.state
+        if(destroyedAstros > first){
+            Axios.put(`scores.${_id}`, {first: destroyedAstros, "second": first, "third": second}).then(res => {
                 this.setState({
                     highscore: res.data,
-                    endGameMsg: `You beat the high score`
+                    endGameMsg: `You beat the high score!`
                 })
             })
-        } else if(points > second ){
-            Axios.put(`/scores/${_id}`, {"second": points, "third": second}).then(res => {
+        } else if(destroyedAstros > second ){
+            Axios.put(`/scores/${_id}`, {"second": destroyedAstros, "third": second}).then(res => {
                 this.setState({
                     highscore: res.data,
                     endGameMsg: `You are in 2nd place!`
                 })
             })
-        } else if(points > third){
-            Axios.out(`/scores/${_id}`, {"third": points}).then(res => {
+        } else if(destroyedAstros > third){
+            Axios.out(`/scores/${_id}`, {"third": destroyedAstros}).then(res => {
                 this.setState({
                     highscore: res.data,
                     endGameMsg: `You are in 3rd place! `
@@ -76,6 +88,7 @@ class AstroProvider extends Component {
 
     componentWillUnmount(){
         window.addEventListener("keydown", this.movePlayer)
+        window.addEventListener("keydown", this.pauseGame)
     }
 
     movePlayer = e => {
@@ -100,6 +113,19 @@ class AstroProvider extends Component {
         } else if(e.which === 40){
             console.log('40 = bottom')
             this.setState(prevState => ({ playerY: prevState.playerY < 490 ? prevState.playerY + 15 : prevState.playerY }))
+        } 
+        if(e.which === 32){
+            this.setState({
+                speed: 0,
+                isPaused: true
+            })
+        } else if(e.which === 13){
+            e.preventDefault()
+            this.setState({
+                speed: 1,
+                isPaused: false
+               
+            })
         }
     }
 
@@ -170,6 +196,7 @@ class AstroProvider extends Component {
                speed: this.state.speed,
                astrosCounted: this.astrosCounted,
                isFlipped: this.state.isFlipped,
+               pauseGame: this.pauseGame,
                ...this.state
            }}>
                 {this.props.children}

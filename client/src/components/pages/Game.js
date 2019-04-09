@@ -13,6 +13,7 @@ const Game = (props) => {
             {/* <div className="game-title"></div> */}
         
             <div className="stay-game">
+                  
                 <Square rProps={props} />
             </div>
 
@@ -24,6 +25,9 @@ const Game = (props) => {
             <div className="instructions">
                 <div className="instructions-img"></div>
                 <div className="instructions-text">USE ARROW KEYS TO CATCH ASTROIDS BEFORE THEY HIT EARTH</div>
+                <div className="instructions-text">Press Space to Pause</div>
+                <div className="instructions-text">Press Enter to unpause</div>
+
                 <div className="astroCount"></div>
             </div>
             

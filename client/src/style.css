@@ -409,7 +409,27 @@ Font-Size: 16px; */
 
 }
 
+.high-score {
+    color: white;
+}
 
+.paused {
+    background-image: url('./assets/paused-space-dinos.png');
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    width: 400px;
+    z-index: 10;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.none {
+    display: none;
+}
 /* /////////GAME//////////////////////////// */
 
 
@@ -511,118 +531,18 @@ Font-Size: 16px; */
 }
 
 
-
-/* ////////////////////////////////////Media queries///////////////////////////////// */
-
-@media (min-height: 850px), (max-width: 800px ) {
-
-   
-/* 
-    .login-signup {
-       
-        width: 800px;
-        height: 300px;
-        padding: 20px;
-        margin-left: 40%;
-        margin-top: 22%;
-       
-    } */
-    
-
-}
-
-@media (max-width: 1600px) {
-    
-
-
-
-/* .login-signup {
-    margin-top: 55%;
-    width: 60vw;
-   
-    
-      
-} */
-
+.users {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
   }
 
 
-  @media (max-width: 1200px) {
-    
 
-   
-    
-    /* .login-signup {
-       
-        width: 60vw;
-        height: 40vh; 
-        margin-top: 52%;
-        
-    } */
-    
-      }
-
-@media (max-width: 1000px) {
-
-/* .login-signup {
-    
-    width: 60vw;
-    height: 40vh; 
-    margin-top: 82%;
-    
-} */
-
-    }
-
-@media (min-width: 700px){
+/* ////////////////////////////////////Media queries///////////////////////////////// */
 
 
-    /* .instructions {
-     
-        margin-top: 200px;
-    }
-    
-    .instructions-img {
-        
-        background-image: url('./assets/arrow-keys.png');
-        background-color: #ffffff;
-        width: 250px;
-        height: 150px;
-        background-position: center;
-        background-size: cover;
-        border-radius: 20px;
-      
-        
-    }
-    
-    .instructions-text {
-        color: black;
-        width: 250px;
-        margin-top: 20px;
-       
-        Font-Family: 'Lato', Sans-Serif;
-        Font-Size: 23px;
-        padding: 20px;
-        background-color: #ffffff;
-        border-radius: 20px;
-        line-height: 30px;
-        
-        
-    } */
 
 
-    .astro-count {
-        
-        position: absolute;
-        Font-Family: 'Lato', Sans-Serif;
-        Font-Size: 23px;
-        width: 300px;
-        text-align: center;
-        margin-top: 15%;
-        background-color: #ffffff;
-        border-radius: 20px;
-        width: 200px;
-        height: 80px;
-    
-    }
-    }
