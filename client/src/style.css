@@ -253,8 +253,25 @@ Font-Size: 16px; */
     position: absolute;
     width: 500px;
     height: 300px;
-    margin-left: 60%;
-    margin-top: 320px;
+    margin-left: 105%;
+    /* margin-top: 320px; */
+}
+
+.astro-count {
+    float:right;
+    position: absolute;
+    Font-Family: 'Lato', Sans-Serif;
+    Font-Size: 23px;
+    width: 300px;
+    text-align: center;
+    /* margin-bottom: 80px; */
+    /* margin-left: 105%; */
+    /* margin-top: 45%; */
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 250px;
+    height: 60px;
+    margin-bottom: 10px;
 }
 
 .instructions-img {
@@ -263,6 +280,7 @@ Font-Size: 16px; */
     background-color: #ffffff;
     width: 250px;
     height: 150px;
+    margin-top: 80px;
     background-position: center;
     background-size: cover;
     border-radius: 20px;
@@ -285,6 +303,39 @@ Font-Size: 16px; */
     
 }
 
+
+
+/* ///////////////////SIDEBAR////////////////////// */
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .main,
+  .sidebar {
+    /* border: 3px solid black; */
+    margin-top: 40%;
+    padding: 15px;
+    /* background-color: #fff; */
+  }
+  
+  /* .main {
+    width: 60%;
+    height: 150vh;
+  } */
+  
+  .sidebar {
+    width: 25%;
+    height: 25vh;
+  }
+  
+  body {
+    background-color: #ccc;
+    font-family: sans-serif;
+    padding: 10px;
+  }
+
 /* //////////////////////////////PREPARE ///////////////////////*/
 
 /* ///////////GAME //////////////////////////////////////////////// */
@@ -302,7 +353,7 @@ Font-Size: 16px; */
 
 
 .game-board {
-    margin-top: 90%;
+    margin-top: 400px;
     display: block;
     max-width: 100%;
     top: 50%;
@@ -392,22 +443,7 @@ Font-Size: 16px; */
     padding-bottom: 10px;
 }
 
-.astro-count {
-    float:right;
-    position: absolute;
-    Font-Family: 'Lato', Sans-Serif;
-    Font-Size: 23px;
-    width: 300px;
-    text-align: center;
-    /* margin-bottom: 80px; */
-    margin-left: 105%;
-    margin-top: 45%;
-    background-color: #ffffff;
-    border-radius: 20px;
-    width: 200px;
-    height: 80px;
 
-}
 
 .high-score {
     color: white;

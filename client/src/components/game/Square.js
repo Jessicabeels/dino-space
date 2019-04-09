@@ -22,7 +22,7 @@ const Square = (props) => {
         isPaused } = props
 
     return (
-        <div className="game-page">
+        <div className="game-page wrapper">
 
             {/* {isPaused
                 ?
@@ -31,10 +31,29 @@ const Square = (props) => {
                 <div className="paused none"></div>
                 } */}
 
-            <div className="astro-count">
-                Astroids Destroyed: {destroyedAstros}
-            </div>
-            <div className="high-score">HIGH SCORE = {highscore}</div>
+
+            {/* <div className="instructions">
+                <div className="astro-count">Astroids Destroyed: {destroyedAstros}</div>
+                <div className="high-score">HIGH SCORE = {highscore}</div>
+                <div className="instructions-img"></div>
+                <div className="instructions-text">USE ARROW KEYS TO CATCH ASTROIDS BEFORE THEY HIT EARTH</div>
+                <div className="instructions-text">Press Space to Pause</div>
+                <div className="instructions-text">Press Enter to unpause</div>
+                <div className="astroCount">{props.astrosDestroyed}</div>
+            </div> */}
+
+        
+                
+            
+                <div class="sidebar">
+                    <div className="astro-count">Astroids Destroyed: {destroyedAstros}</div>
+                    {/* <div className="high-score">HIGH SCORE = {highscore}</div> */}
+                    <div className="instructions-img"></div>
+                    <div className="instructions-text">USE ARROW KEYS TO CATCH ASTROIDS BEFORE THEY HIT EARTH</div>
+                    <div className="instructions-text">Space = Pause<br></br>Enter = unpause</div>
+                    
+                </div>
+            
 
 
             <div className="game-board">
