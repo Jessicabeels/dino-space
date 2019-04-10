@@ -3,27 +3,38 @@ import Astroid from './Astroid'
 import { withAstros } from '../AstroProvider.js'
 
 
-const Square = (props) => {
+class Square extends Component {
+    constructor(){
+        super()
+            this.state = {
+                highscores: []
+            
+        }
+    }
+   
+    render(){
+        const {
+            highscore,
+            usersArr,
+            endGameMsg,
+            playerX,
+            playerY,
+            // playerA,
+            // playerB,
+            astroids,
+            destroyedAstros,
+            speed,
+            // astrosCounted,
+            isFlipped,
+            // astroidNumber,
+            isPaused,
+            highscores } = this.props
+   
 
-    const {
-        highscore,
-        usersArr,
-        endGameMsg,
-        playerX,
-        playerY,
-        // playerA,
-        // playerB,
-        astroids,
-        destroyedAstros,
-        speed,
-        // astrosCounted,
-        isFlipped,
-        // astroidNumber,
-        isPaused,
-        highscores } = props
-
+        console.log(this.props)
        
     return (
+        
         <div className="game-page wrapper">
 
             {/* {isPaused
@@ -55,9 +66,13 @@ const Square = (props) => {
 
                     <div className="highscore">
                         Highscores
-                        {/* First: {highscores[0].first}
-                        Second: {highscores[0].second}
-                        Third: {highscores[0].third} */}
+                        {highscores.length < 1 ? <div> Loading </div> : 
+                            <div>
+                                'First:' {highscores[0].first}
+                                'Second:' {highscores[0].second}
+                                'Third:' {highscores[0].third}
+                            </div>
+                        }
                     </div>
                     
                     <div className="instructions-img"></div>
@@ -86,10 +101,10 @@ const Square = (props) => {
 
 
                 {astroids.map(a => <Astroid key={a}
-                    {...props.rProps}
+                    {...this.props.rProps}
                     speed={speed}
                     astroidNumber={a}
-                    collisionOccured={props.collisionOccured}
+                    collisionOccured={this.props.collisionOccured}
                     astroidX={Math.floor(Math.random() * 400)}
                     astroidY={Math.floor(Math.random() * 200)}
                     playerX={playerX}
@@ -101,6 +116,7 @@ const Square = (props) => {
     )
 }
 
+}
 
 
 

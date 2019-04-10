@@ -86,6 +86,7 @@ class AstroProvider extends Component {
     //put for user to add a new high score... when they die what was their score.. compare to user profile.high score . if current > before put request to update
 
     postNewScores = () => {
+        this.setState({astroids: [1, 2, 3, 4, 5]})
         // let{first, second, third, _id} = this.state.highscore[0]
         // console.log(first, second, third)
         console.log(this.state.highscore)
@@ -109,14 +110,15 @@ class AstroProvider extends Component {
             })
         } else{
             console.log('updated item')
-            // this.putNewScore()
+            this.putNewScore()
+            
         }
    
     }
 
     putNewScore = () => {
-        console.log(this.state.highscore)
-        let{first, second, third, _id} = this.state.highscore[0]
+        console.log(this.state.highscores)
+        let{first, second, third, _id} = this.state.highscores[0]
         
         let {destroyedAstros} = this.state
         console.log(destroyedAstros)
@@ -146,6 +148,7 @@ class AstroProvider extends Component {
                 })
             })
         }
+        this.setState({destroyedAstros : 0})
     }
 
    
