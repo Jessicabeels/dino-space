@@ -288,7 +288,7 @@ Font-Size: 16px; */
     
 }
 
-.instructions-text {
+.instructions-text, .highscore {
     color: rgb(26, 25, 25);
     width: 250px;
     margin-top: 20px;
@@ -300,6 +300,20 @@ Font-Size: 16px; */
     border-radius: 20px;
     line-height: 30px;
     
+    
+}
+
+.highscore {
+    color: rgb(26, 25, 25);
+    width: 250px;
+    margin-top: 80px;
+    height: 110px;
+    Font-Family: 'Lato', Sans-Serif;
+    Font-Size: 23px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    line-height: 30px;
     
 }
 
@@ -329,6 +343,7 @@ Font-Size: 16px; */
     border-radius: 20px;
   }
   
+
 
 
 /* //////////////////////////////PREPARE ///////////////////////*/

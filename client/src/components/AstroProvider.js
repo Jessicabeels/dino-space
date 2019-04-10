@@ -9,7 +9,8 @@ class AstroProvider extends Component {
     constructor(){
         super()
         this.state = {
-            highscore: {first: 0, second: 0, third: 0, }, 
+            highscore: {first: 0, second: 0, third: 0, },
+            highscores: [], 
             usersArr: [],
             points: 0,
             endGameMsg: '',
@@ -46,7 +47,7 @@ class AstroProvider extends Component {
         Axios.get('/scores').then(res => {
             console.log(res.data)
             this.setState({
-                highscore: res.data
+                highscores: res.data
             })   
         })
     }
@@ -242,6 +243,8 @@ class AstroProvider extends Component {
                astrosCounted: this.astrosCounted,
                isFlipped: this.state.isFlipped,
                pauseGame: this.pauseGame,
+               getHighScores: this.getHighScores,
+               highscores: this.state.highscores,
                ...this.state
            }}>
                 {this.props.children}

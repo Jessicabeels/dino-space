@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Astroid from './Astroid'
 import { withAstros } from '../AstroProvider.js'
-// import GameBoard from './GameBoard';
+
 
 const Square = (props) => {
 
@@ -19,8 +19,10 @@ const Square = (props) => {
         // astrosCounted,
         isFlipped,
         // astroidNumber,
-        isPaused } = props
+        isPaused,
+        highscores } = props
 
+       
     return (
         <div className="game-page wrapper">
 
@@ -47,7 +49,17 @@ const Square = (props) => {
             
                 <div class="sidebar">
                     <div className="astro-count">Astroids Destroyed: {destroyedAstros}</div>
-                    {/* <div className="high-score">HIGH SCORE = {highscore}</div> */}
+                    {/* {highscores.map(score => 
+                        <h1>        </h1>
+                    )} */}
+
+                    <div className="highscore">
+                        Highscores
+                        {/* First: {highscores[0].first}
+                        Second: {highscores[0].second}
+                        Third: {highscores[0].third} */}
+                    </div>
+                    
                     <div className="instructions-img"></div>
                     <div className="instructions-text">Use arrow keys to stop astroids before they hit Earth</div>
                     <div className="instructions-text">Space = Pause<br></br>Enter = unpause</div>
