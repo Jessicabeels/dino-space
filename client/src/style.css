@@ -278,7 +278,7 @@ Font-Size: 16px; */
 .instructions-img {
     
     background-image: url('./assets/arrow-keys.png');
-    background-color: #ffffff;
+    background-color: whitesmoke;
     width: 250px;
     height: 150px;
     margin-top: 80px;
@@ -289,7 +289,7 @@ Font-Size: 16px; */
 }
 
 .instructions-text {
-    color: black;
+    color: rgb(26, 25, 25);
     width: 250px;
     margin-top: 20px;
     height: 110px;
@@ -315,17 +315,17 @@ Font-Size: 16px; */
   .main,
   .sidebar {
     /* border: 3px solid black; */
-    margin-top: 47%;
+    margin-top: 30%;
     padding: 15px;
-    /* b ackground-color: #fff; */
+    /* background-color: rgb(223, 64, 64); */
   }
   
   .sidebar {
     /* width: 25%; */
     Font-Family: 'Arvo', Serif;
     height: 40vh;
-    margin-left: 35px;
-    background-color:rgb(175, 60, 60);
+    /* margin-left: 25px; */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     border-radius: 20px;
   }
   
@@ -337,7 +337,7 @@ Font-Size: 16px; */
 .game-container {
     background-color: lightseagreen;
     height: 100vh;
-    background-image: url('./assets/space-background.png');
+    background-image: url('./assets/just-space.png');
     background-position: center;
     background-size: cover;
     position: relative;
@@ -348,15 +348,17 @@ Font-Size: 16px; */
 
 
 .game-board {
-    margin-top: 700px;
+    margin-top: 600px;
     display: block;
     max-width: 100%;
     top: 50%;
     left: 50%;
     border-radius: 20px;
-    transform: translate(-50%, -50%);
-    width: 650px;
+    transform: translate(-50%, -50%); 
+    /* height: 80vh;
+    width: 50vw; */
     height: 600px;
+    width: 650px;
     /* border: 10px solid white; */
     background-position: center;
     background-size: cover;
@@ -364,6 +366,7 @@ Font-Size: 16px; */
     position: relative;
     border: 3px whitesmoke solid;
     z-index: 1;
+    border-radius: 20px;
     
 }
 
@@ -424,6 +427,7 @@ Font-Size: 16px; */
     text-decoration: none;
     background-color: white;  
 }
+
 .game-title {
     background-image: url('./assets/Title.png');
     position: absolute;

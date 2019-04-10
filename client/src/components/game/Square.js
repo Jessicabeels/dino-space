@@ -11,14 +11,14 @@ const Square = (props) => {
         endGameMsg,
         playerX,
         playerY,
-        playerA,
-        playerB,
+        // playerA,
+        // playerB,
         astroids,
         destroyedAstros,
         speed,
-        astrosCounted,
+        // astrosCounted,
         isFlipped,
-        astroidNumber,
+        // astroidNumber,
         isPaused } = props
 
     return (
@@ -41,7 +41,7 @@ const Square = (props) => {
                 <div className="instructions-text">Press Enter to unpause</div>
                 <div className="astroCount">{props.astrosDestroyed}</div>
             </div> */}
-
+            
         
                 
             

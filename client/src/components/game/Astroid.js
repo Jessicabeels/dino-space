@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import { withAstros } from '../AstroProvider'
 
 class Astroid extends Component {
     constructor(props){
@@ -7,7 +7,9 @@ class Astroid extends Component {
         this.state = {
             astroidX: this.props.astroidX,
             astroidY: this.props.astroidY,
-            isAstroidMoving: true
+            isAstroidMoving: true,
+            postNewScores: this.props.postNewScores
+        
         }
         this.level1 = null
     }
@@ -22,14 +24,15 @@ class Astroid extends Component {
             this.setState({astroidY: 100})
         }
         this.checkCollision()
+    
         
     }
 
     checkCollision = () => {
-        console.log(' A x is : ' + this.state.astroidX)
-        console.log(' A y is : ' + this.state.astroidY)
-        console.log(' P x is : ' + this.props.playerX)
-        console.log(' P y is : ' + this.state.playerY)
+        // console.log(' A x is : ' + this.state.astroidX)
+        // console.log(' A y is : ' + this.state.astroidY)
+        // console.log(' P x is : ' + this.props.playerX)
+        // console.log(' P y is : ' + this.state.playerY)
         if (this.state.astroidY < this.props.playerY +20 && this.state.astroidY > this.props.playerY -20) { 
             if(this.state.astroidX < this.props.playerX +75 && this.state.astroidX > this.props.playerX -75){
                 console.log('COLLISION -----------------------------------')
@@ -47,19 +50,25 @@ class Astroid extends Component {
     
 
     checkImpactEarth = () => {
-        console.log(this.props.history)
+        // console.log(this.props.history)
         if(this.state.astroidY >= 530 ){
             console.log(' end the game Astroids Y is : ' + this.state.astroidY)
             // alert('game over')
             setTimeout(() => {
+                this.props.postNewScores() 
                 this.props.history.push("/pages/gameover")
             }, 200)
             
            
-            
-            
+        
+        
         }
+        
     }
+
+
+
+
 
     componentDidMount(){
         if(this.state.isAstroidMoving){
@@ -87,6 +96,6 @@ class Astroid extends Component {
 }
 
 
-export default Astroid
+export default withAstros(Astroid)
 
 

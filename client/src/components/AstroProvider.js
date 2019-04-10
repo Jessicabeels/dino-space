@@ -9,7 +9,7 @@ class AstroProvider extends Component {
     constructor(){
         super()
         this.state = {
-            highscore: [], 
+            highscore: {first: 0, second: 0, third: 0, }, 
             usersArr: [],
             points: 0,
             endGameMsg: '',
@@ -22,7 +22,8 @@ class AstroProvider extends Component {
             speed: 1,
             astrosCounted: 0,
             isFlipped: false,
-            isPaused: false
+            isPaused: false,
+            
         }
 
     }
@@ -32,36 +33,45 @@ class AstroProvider extends Component {
         window.addEventListener("keydown", this.pauseGame)
         
         this.setState({astroids: [1, 2, 3, 4, 5]})
+        this.getHighScores()
         // this.moveAstroid()
     }
 
     componentWillUnmount(){
         window.addEventListener("keydown", this.movePlayer)
-        window.addEventListener("keyup", this.pauseGame)
+        // window.addEventListener("keyup", this.pauseGame)
+    }
+
+    getHighScores = () => {
+        Axios.get('/scores').then(res => {
+            console.log(res.data)
+            this.setState({
+                highscore: res.data
+            })   
+        })
     }
 
     pauseGame = (e) => {
-        if(e.which === 32){
-            this.setState({
-                speed: 0,
-                isPaused: true
-            })
-        } else {
-            e.preventDefault()
-            this.setState({
-                speed: 1,
-                isPaused: false
-               
+        // this.state.isPaused  ?
+        console.log(e.which)
+        let keyPressed = e.which
+        if(keyPressed=== 32){
+            console.log('space pressed')
+            if (this.state.isPaused === false){
+                this.setState({
+                    speed: 0,
+                    isPaused: true
+                })
+            } else if (this.state.isPaused === true){
+                this.setState({
+                    speed: 1,
+                    isPaused: false
             })
         }
     }
+}
     
-
-    getUsers = () => {
-        Axios.get('/users').then(res => {
-            this.setState({usersArr: res.data})
-        })
-    }
+// Scores//////////////////////////////////////////////////////////////////
 
 
     saveScores = () => {
@@ -70,36 +80,65 @@ class AstroProvider extends Component {
       })
     }
 
-    selectUser = id => {
-        this.state.usersArr.map((user, i) => {
-            document.getElementsByClassName('user-card')[i].classList.remove('overlay')
-            return user._id !== id ? document.getElementsByClassName('user-card')[i].classList.add('overlay') :
+  
+
+    //put for user to add a new high score... when they die what was their score.. compare to user profile.high score . if current > before put request to update
+
+    postNewScores = () => {
+        // let{first, second, third, _id} = this.state.highscore[0]
+        // console.log(first, second, third)
+        console.log(this.state.highscore)
+        if(this.state.highscore.length < 1){
+            console.log('added new item')
+            let {destroyedAstros} = this.state
+
+            let newHighScores = {
+                first: destroyedAstros,
+                second: 0,
+                third: 0
+            }
+    
+            Axios.post('/scores', newHighScores).then(res => {
+                console.log(res.data)
                 this.setState({
-                    user: user,
-                    canPlay: true
+                    highscore: res.data,
+                    endGameMsg: `Congratulations you have the new high score!`
+                    
+                }, () => console.log(this.state.highscore))   
             })
-        })
+        } else{
+            console.log('updated item')
+            // this.putNewScore()
+        }
+   
     }
 
-    newScores = () => {
+    putNewScore = () => {
+        console.log(this.state.highscore)
         let{first, second, third, _id} = this.state.highscore[0]
+        
         let {destroyedAstros} = this.state
-        if(destroyedAstros > first){
-            Axios.put(`scores.${_id}`, {first: destroyedAstros, "second": first, "third": second}).then(res => {
+        console.log(destroyedAstros)
+        console.log(first)
+         if(destroyedAstros > first){
+            Axios.put(`/scores/${_id}`, {first: destroyedAstros, "second": first, "third": second}).then(res => {
+                console.log(res.data)
                 this.setState({
                     highscore: res.data,
                     endGameMsg: `You beat the high score!`
                 })
             })
         } else if(destroyedAstros > second ){
-            Axios.put(`/scores/${_id}`, {"second": destroyedAstros, "third": second}).then(res => {
+            Axios.put(`/scores/${_id}`, {"first": first, "second": destroyedAstros, "third": second}).then(res => {
+                console.log(res.data)
                 this.setState({
                     highscore: res.data,
                     endGameMsg: `You are in 2nd place!`
                 })
             })
         } else if(destroyedAstros > third){
-            Axios.out(`/scores/${_id}`, {"third": destroyedAstros}).then(res => {
+            Axios.put(`/scores/${_id}`, {"first": first, "second": second,"third": destroyedAstros}).then(res => {
+                console.log(res.data)
                 this.setState({
                     highscore: res.data,
                     endGameMsg: `You are in 3rd place! `
@@ -187,7 +226,7 @@ class AstroProvider extends Component {
            <AstroContext.Provider value={{
                getUsers: this.getUsers,
                saveScores: this.saveScores,
-               newScores: this.newScores,
+               postNewScores: this.postNewScores,
                highscore: this.state.highscore, 
                usersArr: this.state.usersArr,
                collisionOccured: this.collisionOccured,
