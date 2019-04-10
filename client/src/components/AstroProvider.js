@@ -125,7 +125,7 @@ class AstroProvider extends Component {
                 console.log(res.data)
                 this.setState({
                     highscore: res.data,
-                    endGameMsg: `You beat the high score!`
+                    endGameMsg: `You beat the highest score!`
                 })
             })
         } else if(destroyedAstros > second ){
