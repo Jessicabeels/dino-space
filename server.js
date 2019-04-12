@@ -6,15 +6,17 @@ const morgan = require('morgan')
 const mongoose = require('mongoose')
 const expressJwt = require('express-jwt')
 const PORT = process.env.PORT || 7100
-
+const path = require("path")
 
 //Middlewares for every request
 app.use(express.json())
 app.use(morgan('dev'))
+app.use(express.static(path.join(__dirname, "client", "build")))
+
 
 
 //DB Connect 
-mongoose.connect('mongodb://localhost:27017/dino-space', {"usedNewUrlParser": true}, () => {
+mongoose.connect( process.env.MONGO_URI ||'mongodb://localhost:27017/dino-space', {"usedNewUrlParser": true}, () => {
     console.log("[o] Connected to the DB")
 })
 
@@ -35,6 +37,10 @@ app.use((err, req, res, next) => {
     }
     return res.send({errMsg: err.message})
 })
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 //Server setup
 app.listen(PORT, () => {

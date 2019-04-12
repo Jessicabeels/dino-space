@@ -14,9 +14,7 @@ class Square extends Component {
    
     render(){
         const {
-            highscore,
-            usersArr,
-            endGameMsg,
+           
             playerX,
             playerY,
             // playerA,
