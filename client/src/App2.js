@@ -25,7 +25,7 @@ class App extends Component {
                         render={rProps => 
                             token 
                             
-                                ? <Redirect to="/"/>
+                                ? <Redirect to="/pages/home"/>
                                 
                                 : <Auth {...rProps}/>}/>
                     <ProtectedRoute
