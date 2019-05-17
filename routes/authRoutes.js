@@ -25,7 +25,7 @@ authRouter.post("/signup", (req, res, next) => {
                 return next(err)
             }
             //creates token using jwt.sign(). We give the user as an object
-            //for the token payload, and use our provate environment SECRET
+            //for the token payload, and use our private environment SECRET
             //for the signature
             const token = jwt.sign(savedUser.withoutPassword(), process.env.SECRET)
             return res.status(201).send({user: savedUser.withoutPassword(), token})

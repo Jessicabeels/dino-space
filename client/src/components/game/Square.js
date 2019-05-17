@@ -63,19 +63,19 @@ class Square extends Component {
                     )} */}
 
                     <div className="highscore">
-                        Highscores
+                        HIGHSCORES
                         {highscores.length < 1 ? <div> Loading </div> : 
-                            <div>
-                                'First:' {highscores[0].first}
-                                'Second:' {highscores[0].second}
-                                'Third:' {highscores[0].third}
+                            <div className="scoreboard">
+                                First place: {highscores[0].first} points 
+                                Second place: {highscores[0].second} points
+                                Third place: {highscores[0].third} points
                             </div>
                         }
                     </div>
                     
                     <div className="instructions-img"></div>
-                    <div className="instructions-text">Use arrow keys to stop astroids before they hit Earth</div>
-                    <div className="instructions-text">Space = Pause<br></br>Enter = unpause</div>
+                    <div className="instructions-text">Use arrow keys to stop astroids before they hit Earth!</div>
+                    <div className="instructions-text2">Space = Pause<br></br>Enter = unpause</div>
                     
                 </div>
             

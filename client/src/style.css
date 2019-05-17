@@ -251,67 +251,66 @@ Font-Size: 16px; */
 
 .instructions {
     position: absolute;
-    background-color: red;
+    
     width: 500px;
-    height: 300px;
+    
     /* margin-left: 105%; */
     /* margin-top: 320px; */
 }
 
-.astro-count {
+.astro-count, .instructions-text2  {
     float:right;
+    font-size: 37px;
     position: absolute;
     Font-Family: 'Lato', Sans-Serif;
-    Font-Size: 23px;
+    
     width: 300px;
     text-align: center;
-    /* margin-bottom: 80px; */
-    /* margin-left: 105%; */
-    /* margin-top: 45%; */
-    background-color: #ffffff;
+    background-color: #fee900;
     border-radius: 20px;
-    width: 250px;
-    height: 60px;
-    margin-bottom: 10px;
+    /* width: 250px; */
+    height: 90px;
+    
+    margin-top: 10px;
 }
 
 .instructions-img {
     
     background-image: url('./assets/arrow-keys.png');
-    background-color: whitesmoke;
-    width: 250px;
-    height: 150px;
-    margin-top: 80px;
+    background-color: #fee900;
+    width: 300px;
+    height: 190px;
+    margin-top: 25px;
     background-position: center;
     background-size: cover;
     border-radius: 20px;
     
 }
 
-.instructions-text, .highscore {
+.instructions-text{
     color: rgb(26, 25, 25);
-    width: 250px;
+    width: 300px;
     margin-top: 20px;
-    height: 110px;
+    height: 120px;
     Font-Family: 'Lato', Sans-Serif;
     Font-Size: 23px;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #fee900;
     border-radius: 20px;
     line-height: 30px;
-    
-    
 }
+
+
 
 .highscore {
     color: rgb(26, 25, 25);
-    width: 250px;
-    margin-top: 80px;
-    height: 110px;
+    width: 300px;
+    margin-top: 110px;
+    height: 140px;
     Font-Family: 'Lato', Sans-Serif;
     Font-Size: 23px;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #fee900;
     border-radius: 20px;
     line-height: 30px;
     
@@ -331,13 +330,14 @@ Font-Size: 16px; */
     /* border: 3px solid black; */
     margin-top: 30%;
     padding: 15px;
+    
     /* background-color: rgb(223, 64, 64); */
   }
   
   .sidebar {
     /* width: 25%; */
     Font-Family: 'Arvo', Serif;
-    height: 40vh;
+    height: 50vh;
     /* margin-left: 25px; */
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     border-radius: 20px;
