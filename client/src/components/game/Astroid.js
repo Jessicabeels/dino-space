@@ -35,7 +35,7 @@ class Astroid extends Component {
         // console.log(' P y is : ' + this.state.playerY)
         if (this.state.astroidY < this.props.playerY +20 && this.state.astroidY > this.props.playerY -20) { 
             if(this.state.astroidX < this.props.playerX +75 && this.state.astroidX > this.props.playerX -75){
-                console.log('COLLISION -----------------------------------')
+                console.log('COLLISION ----------------------------------')
                 this.setState({
                     isAstroidMoving: false
                     
@@ -43,7 +43,7 @@ class Astroid extends Component {
                 this.props.collisionOccured(this.props.astroidNumber)
             }
         }
-        this.checkImpactEarth()
+        this.checkImpactEarth() 
         
     }
 
